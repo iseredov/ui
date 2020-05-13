@@ -1,0 +1,84 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint --fix",
+    "prepare": "tsdx build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "@popperjs/core": "^2.4.0",
+    "react": ">=16",
+    "react-dom": "^16.13.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "cargomart-ui2",
+  "author": "Ivan Seredov",
+  "module": "dist/cargomart-ui2.esm.js",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@popperjs/core": "^2.4.0",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-backgrounds": "^5.3.18",
+    "@storybook/addon-docs": "^5.3.18",
+    "@storybook/addon-info": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addon-storysource": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^5.3.18",
+    "@types/classnames": "^2.2.10",
+    "@types/lodash": "^4.14.150",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
+    "babel-loader": "^8.1.0",
+    "classnames": "^2.2.6",
+    "fork-ts-checker-webpack-plugin": "^4.1.3",
+    "husky": "^4.2.5",
+    "lodash": "^4.17.15",
+    "lodash-es": "^4.17.15",
+    "node-sass": "^4.14.1",
+    "postcss-import": "^12.0.1",
+    "postcss-less": "^3.1.4",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-scss": "^2.0.0",
+    "react": "^16.13.1",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
+    "react-popper": "^2.2.3",
+    "rollup-plugin-postcss": "^3.1.1",
+    "sass-loader": "^8.0.2",
+    "storybook-addon-deps": "^2.0.1",
+    "ts-loader": "^7.0.3",
+    "tsdx": "^0.13.2",
+    "tslib": "^1.11.2",
+    "typescript": "^3.8.3",
+    "typescript-plugin-css-modules": "^2.3.0"
+  }
+}

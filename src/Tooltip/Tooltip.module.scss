@@ -1,0 +1,67 @@
+@import "../style/mixins";
+
+$tooltip-bg: #475359;
+$tooltip-arrow-width: 4px;
+$tooltip-arrow-color: $tooltip-bg;
+
+.tooltipBody {
+  z-index: 8890;
+  font-size: 12px;
+  line-height: 16px;
+  max-width: 256px;
+  padding: 4px 12px;
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  background-color: $tooltip-bg;
+  border-radius: 3px;
+  box-shadow: 0 0 4px opacify(#000, 0.17);
+  min-height: 24px;
+  @include word-wrap;
+
+  &[data-popper-placement*='right'] {
+    margin-left: 4px;
+
+    > .tooltipArrow {
+      left: -4px;
+      border-width: $tooltip-arrow-width $tooltip-arrow-width $tooltip-arrow-width 0;
+      border-right-color: $tooltip-arrow-color;
+    }
+  }
+  &[data-popper-placement*='left'] {
+    margin-right: 4px;
+
+    > .tooltipArrow {
+      right: -4px;
+      border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
+      border-left-color: $tooltip-arrow-color;
+    }
+  }
+  &[data-popper-placement*='top'] {
+    margin-bottom: 4px;
+
+    > .tooltipArrow {
+      bottom: -4px;
+      margin-left: -2px;
+      border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
+      border-top-color: $tooltip-arrow-color;
+    }
+  }
+  &[data-popper-placement*='bottom'] {
+    margin-top: 4px;
+
+    > .tooltipArrow {
+      top: -4px;
+      margin-left: -2px;
+      border-width: 0 $tooltip-arrow-width $tooltip-arrow-width;
+      border-bottom-color: $tooltip-arrow-color;
+    }
+  }
+}
+
+.tooltipArrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: solid transparent;
+}

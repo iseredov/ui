@@ -1,0 +1,69 @@
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-gap: 32px;
+  grid-template-columns: repeat( 3, 1fr);
+  grid-template-areas:
+          "topLeft     top      topRight"
+          "left        center   right"
+          "bottomLeft  bottom   bottomRight"
+;
+}
+
+.top{
+  grid-area: top;
+  align-self: start;
+  justify-self: center;
+}
+
+.topLeft{
+  grid-area: topLeft;
+  align-self: start;
+  justify-self: start;
+}
+
+.topRight{
+  grid-area: topRight;
+  align-self: start;
+  justify-self: end;
+}
+
+.left{
+  grid-area: left;
+  align-self: center;
+  justify-self: start;
+}
+
+.right{
+  grid-area: right;
+  align-self: center;
+  justify-self: end;
+}
+
+.center{
+  grid-area: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.bottom{
+  grid-area: bottom;
+  align-self: end;
+  justify-self: center;
+}
+
+.bottomLeft{
+  grid-area: bottomLeft;
+  align-self: end;
+  justify-self: start;
+}
+
+.bottomRight{
+  grid-area: bottomRight;
+  align-self: end;
+  justify-self: end;
+}

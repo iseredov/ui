@@ -1,0 +1,95 @@
+@import "../style/vars";
+
+.Checkbox {
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  color: $gunmetal;
+
+  &_disabled {
+    cursor: default;
+    color: #a1a6ab;
+  }
+}
+
+.checkmark {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  flex: none;
+}
+
+.label {
+  width: 100%;
+}
+
+.box {
+  stroke: #b9b9b9;
+  stroke-width: 1px;
+  fill: #ffffff;
+  transition: 300ms ease all;
+  .Checkbox:hover & {
+    stroke: $azure;
+  }
+}
+
+.shadow {
+  fill: none;
+}
+
+.check {
+  fill: none;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+
+  &:focus {
+    & + .checkmark > .shadow {
+      fill: opacify($azure, .3);
+    }
+  }
+
+  &_active,
+  &_active:checked {
+    & + .checkmark > .box {
+      stroke: darken($azure, 15);
+      fill: red;
+    }
+    &:not(:disabled) + .checkmark > .check {
+      fill: #fff;
+    }
+  }
+
+  &:checked {
+    & + .checkmark > .box {
+      stroke: $azure;
+      fill: $azure;
+    }
+
+    & + .checkmark > .check {
+      fill: #fff;
+    }
+  }
+
+  &:disabled,
+  &_active:disabled {
+    & + .checkmark > .box {
+      fill: #ebeff2;
+      stroke: #e2e8eb;
+    }
+  }
+  &:checked:disabled {
+    & + .checkmark > .check {
+      fill: #c5c4c4;
+    }
+  }
+}

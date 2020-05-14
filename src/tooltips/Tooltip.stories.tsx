@@ -1,8 +1,8 @@
 import React from 'react';
 import { placements } from '@popperjs/core/lib/enums';
 import { withKnobs, select } from '@storybook/addon-knobs';
-import { Tooltip, ITooltipProps } from '../src/Tooltip';
-import { Grid3x3 } from './helpers/Grid3x3';
+import { Tooltip } from './Tooltip';
+import { Grid3x3 } from '../storybook/Grid3x3';
 
 export default {
   title: 'Tooltip',
@@ -12,7 +12,13 @@ export default {
   },
 };
 
-export const WithKnobs = (props: Partial<ITooltipProps>) => (
+export const Default = () => (
+  <Tooltip content="tooltip">
+    <span>hoverMe</span>
+  </Tooltip>
+);
+
+export const WithKnobs = () => (
   <Grid3x3>
     <Tooltip
       content="tooltip"
@@ -24,7 +30,6 @@ export const WithKnobs = (props: Partial<ITooltipProps>) => (
         ),
         'right'
       )}
-      {...props}
     >
       <span>hoverMe</span>
     </Tooltip>

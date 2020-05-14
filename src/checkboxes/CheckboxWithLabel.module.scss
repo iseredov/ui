@@ -1,0 +1,31 @@
+@import "../shared/vars";
+
+.container {
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  color: $gunmetal;
+
+  &_disabled {
+    cursor: default;
+    color: #a1a6ab;
+  }
+
+  &:hover .box {
+    stroke: $azure;
+  }
+}
+
+.label {
+  width: 100%;
+  margin-left: $base-offset * 2;
+}
+
+.text{
+  margin-top: $base-offset / 2;
+  margin-bottom: $base-offset / 2;
+  font-size: 14px;
+  line-height: 16px;
+}

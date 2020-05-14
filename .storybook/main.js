@@ -1,3 +1,5 @@
+const path = require('path');
+
 const postCssLoaderConfig = {
   loader: require.resolve('postcss-loader'),
   options: {
@@ -7,7 +9,7 @@ const postCssLoaderConfig = {
 };
 
 module.exports = {
-  stories: ['../stories/**/*.stories.(ts|tsx|mdx)'],
+  stories: ['../src/**/*.stories.(ts|tsx|mdx)'],
   addons: [
     '@storybook/preset-typescript',
     '@storybook/addon-actions',
@@ -28,7 +30,9 @@ module.exports = {
         {
           loader: 'css-loader',
           options: {
-            modules: true,
+            modules: {
+              localIdentName: '[path][name]__[local]--[hash:base64:5]',
+            },
           },
         },
         {

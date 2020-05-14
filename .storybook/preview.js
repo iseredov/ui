@@ -6,7 +6,8 @@ addParameters({
   options: {
     showRoots: true,
   },
-  docs: { page: DocsPage },
+  viewMode: 'docs',
+  docs: { page: DocsPage, inlineStories: true },
   dependencies: {
     //display only dependencies/dependents that have a story in storybook
     //by default this is false

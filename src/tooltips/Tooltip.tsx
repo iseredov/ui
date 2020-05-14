@@ -11,7 +11,7 @@ import { PopperProps, usePopper } from 'react-popper';
 import { Portal } from '../Portal';
 
 import s from './Tooltip.module.scss';
-import { stopBubbling } from '../helpers';
+import { stopBubbling } from '../shared/helpers';
 
 interface TTriggerProps {
   ref: React.Dispatch<React.SetStateAction<null>>;

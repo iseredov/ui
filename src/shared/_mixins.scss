@@ -1,0 +1,46 @@
+@mixin word-wrap {
+  overflow-wrap: break-word; /* не поддерживает IE, Firefox; является копией word-wrap */
+  word-wrap: break-word;
+  word-break: break-word; /* не поддерживает Opera12.14, значение keep-all не поддерживается IE, Chrome */
+  line-break: auto; /* нет поддержки для русского языка */
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin group {
+  &_group-position-h_start {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &_group-position-h_center {
+    border-radius: 0;
+    margin-left: -1px;
+  }
+
+  &_group-position-h_end {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
+  }
+
+  &_group-position-v_start {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &_group-position-v_center {
+    border-radius: 0;
+    margin-top: -1px;
+  }
+
+  &_group-position-v_end {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-top: -1px;
+  }
+}

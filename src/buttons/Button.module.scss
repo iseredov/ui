@@ -1,0 +1,290 @@
+@import "../shared/vars";
+@import "../shared/mixins";
+
+@mixin appearance_background($color) {
+  background-color: $color;
+
+  &:hover,
+  &.Button_hover {
+    background-color: darken(saturate(adjust-hue($color, 0.1329), 0), 3.1373);
+  }
+  &:active,
+  &.Button_active {
+    background-color: darken(saturate(adjust-hue($color, 0.1576), 0), 6.0784);
+  }
+  &:focus,
+  &.Button_focus {
+    box-shadow: 0 0 0 2px fade($color, 40);
+  }
+}
+
+@mixin appearance_color($color, $border-color) {
+  background-color: #fff;
+  box-shadow: inset 0 0 0 1px $border-color;
+  color: $color;
+
+  &:hover,
+  &.Button_hover {
+    background-color: #f7fcff;
+  }
+  &:active,
+  &.Button_active {
+    background-color: #e6f4ff;
+  }
+  &:focus,
+  &.Button_focus {
+    box-shadow: inset 0 0 0 1px $border-color, 0 0 0 2px fade($border-color, 40);
+  }
+}
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Button {
+  user-select: none;
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+
+  border-radius: 3px;
+  border: none;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 200ms ease-in-out, background-color 200ms ease-in-out, color 200ms ease-in-out;
+  white-space: nowrap;
+  font-weight: 400;
+
+  &.Button {
+    @include group()
+  };
+
+  &_block {
+    display: flex;
+  }
+
+  &_wide {
+    width: 100%;
+  }
+
+  &_solid {
+    color: #fff;
+  }
+
+  &_content-position_start {
+    justify-content: flex-start;
+  }
+  &_content-position_center {
+    justify-content: center;
+  }
+  &_content-position_end {
+    justify-content: flex-end;
+  }
+
+  &_size_xl {
+    height: 48px;
+    min-width: 40px;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0 20px;
+    .text {
+      margin: 0 8px;
+    }
+  }
+
+  &_size_lg {
+    height: 40px;
+    min-width: 40px;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 0 16px;
+    .text {
+      margin: 0 8px;
+    }
+  }
+  &_size_nm {
+    height: 32px;
+    min-width: 32px;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 0 8px;
+    .text {
+      margin: 0 4px;
+    }
+  }
+  &_size_sm {
+    height: 28px;
+    min-width: 28px;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 0 4px;
+    .text {
+      margin: 0 4px;
+    }
+  }
+  &_size_xs {
+    height: 24px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 0 4px;
+    .text {
+      margin: 0 4px;
+    }
+  }
+
+  &_appearance_success {
+    @include appearance_background($colorGreen);
+  }
+
+  &_appearance_primary {
+    @include appearance_background($colorPrimary);
+  }
+
+  &_appearance_danger {
+    @include appearance_background($colorRed);
+  }
+
+  &_appearance_info {
+    @include appearance_color($colorPrimary, $colorPrimary);
+  }
+
+  &_appearance_secondary {
+    @include appearance_color($colorGray, #d4d4d4);
+    svg {
+      color: rgba(black, 54);
+    }
+
+    &:not(.Button_onlyIcon) {
+      svg {
+        color: $cool-grey-two;
+      }
+    }
+  }
+
+  &_appearance_transparent {
+    background-color: rgba(#fff, 12);
+    color: #fff;
+
+    &:hover,
+    &.Button_hover {
+      background-color: rgba(#fff, 24);
+    }
+    &:active,
+    &.Button_active {
+      background-color: #fff;
+      color: #475359;
+    }
+    &:focus,
+    &.Button_focus {
+      box-shadow: 0 0 0 2px rgba(#fff, 80);
+    }
+  }
+
+  &:disabled,
+  &.Button_disabled {
+    cursor: default;
+    background-color: #e1e5e9;
+    color: #9fadbb;
+    box-shadow: none;
+  }
+
+  &_loading {
+    $offset: 14px;
+    $color1: #d9dce0;
+    $color2: #e5ebee;
+    cursor: default;
+    color: #9fadbb;
+    animation: backgroundPosition 1s linear infinite, backgroundImage 1s linear 300ms forwards;
+    transition-delay: 350ms;
+    background-size: 40px 40px;
+  }
+
+  &_onlyIcon {
+    padding: 0;
+  }
+}
+
+.prefix {
+  .Button_size_xs &,
+  .Button_size_nm & {
+    margin-left: -4px;
+  }
+
+  .Button_size_sm & {
+    margin-left: -2px;
+  }
+
+  .Button_onlyIcon & {
+    margin: 0;
+  }
+}
+
+.postfix {
+  flex: none;
+  .Button_size_xs &,
+  .Button_size_nm & {
+    margin-right: -4px;
+  }
+
+  .Button_size_sm & {
+    margin-right: -2px;
+  }
+
+  .Button_onlyIcon & {
+    margin: 0;
+  }
+}
+
+@keyframes backgroundPosition {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 40px;
+  }
+}
+
+@keyframes backgroundImage {
+  0% {
+    border: none;
+  }
+  100% {
+    $offset: 14px;
+    $color1: #d9dce0;
+    $color2: #e5ebee;
+    background-image: linear-gradient(
+      135deg,
+      $color1 $offset*0,
+      $color1 $offset,
+      $color2 $offset,
+      $color2 $offset*2,
+      $color1 $offset*2,
+      $color1 $offset*3,
+      $color2 $offset*3,
+      $color2 $offset*4
+    );
+  }
+}
+
+@keyframes backgroundImageSecondary {
+  100% {
+    border: none;
+    $offset: 14px;
+    $color1: #d9dce0;
+    $color2: #e5ebee;
+    background-image: linear-gradient(
+      135deg,
+      $color1 $offset*0,
+      $color1 $offset,
+      $color2 $offset,
+      $color2 $offset*2,
+      $color1 $offset*2,
+      $color1 $offset*3,
+      $color2 $offset*3,
+      $color2 $offset*4
+    );
+  }
+}

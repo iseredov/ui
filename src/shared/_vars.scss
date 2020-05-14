@@ -5,8 +5,8 @@ $colorGreen: #24b377;
 $colorRed: #f23d6a;
 $colorGray: #475359;
 $colorGrayLight: #7a8187;
-$light-grey: opacify(#000, .2);
-$gray: opacify(#000, .54);
+$light-grey: rgba(#000, .2);
+$gray: rgba(#000, .54);
 
 $hover: #ebf1ff;
 
@@ -20,3 +20,5 @@ $white: #fff;
 
 $z-index-mobile: 1010;
 $z-index-select-optionList: 100000;
+
+$base-offset: 8px;

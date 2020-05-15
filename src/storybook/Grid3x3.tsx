@@ -1,4 +1,5 @@
 import React, { memo, ReactNode } from 'react';
+import cn from 'classnames/bind';
 
 // @ts-ignore
 import s from './Grid3x3.module.scss';
@@ -23,7 +24,7 @@ export const Grid3x3 = memo<TProps>(function Grid3x3({ children }) {
   return (
     <div className={s.container}>
       {positions.map(position => (
-        <div className={s[position]} key={position}>
+        <div className={cn(s.maxWidth, s[position])} key={position}>
           {children}
         </div>
       ))}

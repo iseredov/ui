@@ -135,7 +135,7 @@ export const MobileBaseSelect = <Option extends IBaseOption>({
                         selectedValue
                       );
 
-                  const key = getOptionId(currentOption);
+                  const key = String(getOptionId(currentOption));
 
                   const generalProps: IOptionProps<Option> = {
                     name: getOptionName(currentOption),

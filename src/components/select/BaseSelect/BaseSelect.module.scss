@@ -1,14 +1,14 @@
 @import '../../../shared/vars';
 
-$disabledColor: fade(black, 20);
+$disabledColor: rgba(black, 0.2);
 $disabledBorderColor: '#ebeff2l';
 $borderRadiusBase: 3px;
 
 $disabled-box-shadow-style: inset 0 0 0 1px $disabledBorderColor;
-$focused-box-shadow-style: inset 0 0 0 1px $azure, 0 0 0 2px fade($azure, 40);
+$focused-box-shadow-style: inset 0 0 0 1px $azure, 0 0 0 2px rgba($azure, 0.4);
 $error-box-shadow-style: inset 0 0 0 1px $red-pink;
 $focusedError-box-shadow-style: $error-box-shadow-style,
-  0 0 0 2px fade($azure, 40);
+  0 0 0 2px rgba($azure, 0.4);
 
 .wrapper {
   position: relative;
@@ -48,7 +48,7 @@ $focusedError-box-shadow-style: $error-box-shadow-style,
   transition: box-shadow 150ms ease-in-out;
 
   &:hover {
-    box-shadow: inset 0 0 0 1px fade(black, 38);
+    box-shadow: inset 0 0 0 1px rgba(black, 0.38);
   }
 
   &_error {
@@ -195,6 +195,7 @@ $iconSize: 24px;
 }
 .iconsWrapper {
   display: flex;
+  align-items: center;
 }
 
 .icon {

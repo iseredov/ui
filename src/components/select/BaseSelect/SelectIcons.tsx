@@ -63,6 +63,7 @@ export const SelectIcons = ({
       )}
       {hasDropDownIcon && (
         <IconArrow
+          size="xs"
           className={cx(
             'icon',
             'icon-arrow',

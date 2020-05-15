@@ -9,7 +9,7 @@ export {
   defaultLoadingMessage,
 } from './defaultValues';
 
-export { IGeneralSelectProps, ISelectClassNames, SIZE } from './types';
+export { SIZE } from './types';
 export {
   IBaseSelectClassNames,
   ICustomOption,

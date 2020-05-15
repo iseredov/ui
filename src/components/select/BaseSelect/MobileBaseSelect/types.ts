@@ -1,6 +1,5 @@
 import { SyntheticEvent } from 'react';
 import { IMobileViewProps, IOptionProps } from '../Options';
-import { IdType } from 'global';
 
 export interface IMobileBaseSelectProps<Option> extends IMobileViewProps {
   /**

@@ -1,4 +1,4 @@
-.container{
+.container {
   position: absolute;
   top: 0;
   left: 0;
@@ -6,63 +6,66 @@
   bottom: 0;
   display: grid;
   grid-gap: 32px;
-  grid-template-columns: repeat( 3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
-          "topLeft     top      topRight"
-          "left        center   right"
-          "bottomLeft  bottom   bottomRight"
-;
+    'topLeft     top      topRight'
+    'left        center   right'
+    'bottomLeft  bottom   bottomRight';
 }
 
-.top{
+.maxWidth {
+  display: contents;
+}
+
+.top {
   grid-area: top;
   align-self: start;
   justify-self: center;
 }
 
-.topLeft{
+.topLeft {
   grid-area: topLeft;
   align-self: start;
   justify-self: start;
 }
 
-.topRight{
+.topRight {
   grid-area: topRight;
   align-self: start;
   justify-self: end;
 }
 
-.left{
+.left {
   grid-area: left;
   align-self: center;
   justify-self: start;
 }
 
-.right{
+.right {
   grid-area: right;
   align-self: center;
   justify-self: end;
 }
 
-.center{
+.center {
   grid-area: center;
   align-self: center;
   justify-self: center;
 }
 
-.bottom{
+.bottom {
   grid-area: bottom;
   align-self: end;
   justify-self: center;
 }
 
-.bottomLeft{
+.bottomLeft {
   grid-area: bottomLeft;
   align-self: end;
   justify-self: start;
 }
 
-.bottomRight{
+.bottomRight {
   grid-area: bottomRight;
   align-self: end;
   justify-self: end;

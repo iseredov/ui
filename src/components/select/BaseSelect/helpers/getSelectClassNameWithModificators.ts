@@ -1,8 +1,8 @@
-import { POSITION, SIZE } from '../types';
+import { SelectPosition, SelectSize } from '../types';
 
 interface TClassNameConfig {
-  position?: POSITION;
-  size?: SIZE;
+  position?: SelectPosition;
+  size?: SelectSize;
   hasError?: boolean;
   isFocused?: boolean;
   isReadOnly?: boolean;
@@ -12,8 +12,8 @@ interface TClassNameConfig {
 }
 
 export const getSelectClassNameWithModificators = ({
-  position = POSITION.TopLeft,
-  size = SIZE.SM,
+  position = 'topLeft',
+  size = 'sm',
   hasError = false,
   isFocused = false,
   isReadOnly = false,

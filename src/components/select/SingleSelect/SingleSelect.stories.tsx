@@ -8,31 +8,12 @@ import {
   boolean,
   text,
 } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
 
+import { defaultOptionList, selectSize } from '../storyHelpers';
 import { Grid3x3 } from '../../../storybook/Grid3x3';
 
 import { Select } from './SingleSelect';
-
-enum SIZE {
-  SM = 'sm',
-  NM = 'nm',
-  LG = 'lg',
-}
-
-const defaultOptionList = [
-  { id: 1, name: 'Маленькая опция' },
-  { id: 2, name: 'Опция чуть большей длины' },
-  {
-    id: 3,
-    name:
-      'Супер мега длинная опция, чтобы проверить корректность её отображения',
-  },
-  { id: 4, name: 'Опция тест_1' },
-  { id: 5, name: 'Скромная опция' },
-  { id: 8, name: 'Опция тест_2' },
-];
+import { SelectSize } from '../BaseSelect';
 
 export default {
   title: 'Cargomart/Select/SingleSelect',
@@ -91,7 +72,7 @@ export const WithKnobs = () => {
     textGroupId
   );
 
-  const size = select('size', SIZE, SIZE.SM, sizeGroupId);
+  const size = select<SelectSize>('size', selectSize, 'sm', sizeGroupId);
   const maxOptionListWidth = number(
     'Максимальная ширина выпадающего списка в пикселях (maxOptionListWidth)',
     undefined,
@@ -132,26 +113,22 @@ export const WithKnobs = () => {
   );
 };
 
-// storiesOf('Single Select', module)
-//   .addDecorator(withKnobs)
-//   .addDecorator(withInfo)
-//   .add('knobs', () => {})
-//   .add('No options', () => {
-//     const value = { id: 1, name: 'Что-то выбрано' };
-//     const noOptionsMessage = text(
-//       'Сообщение, когда нет опций (noOptionsMessage)',
-//       'Но опций нет, например, отвалился бекэнд'
-//     );
+export const NoOptions = () => {
+  const value = { id: 1, name: 'Что-то выбрано' };
+  const noOptionsMessage = text(
+    'Сообщение, когда нет опций (noOptionsMessage)',
+    'Но опций нет, например, отвалился бекэнд'
+  );
 
-//     return (
-//       <Grid3x3>
-//         <Select
-//           mobileName="Простой справочник"
-//           noOptionsMessage={noOptionsMessage}
-//           value={value}
-//           options={[]}
-//           onChange={noop}
-//         />
-//       </Grid3x3>
-//     );
-//   });
+  return (
+    <Grid3x3>
+      <Select
+        mobileName="Простой справочник"
+        noOptionsMessage={noOptionsMessage}
+        value={value}
+        options={[]}
+        onChange={noop}
+      />
+    </Grid3x3>
+  );
+};

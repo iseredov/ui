@@ -9,3 +9,5 @@ export enum KEY_CODE {
   ARROW_DOWN = 40,
   DELETE = 46,
 }
+
+export const MOBILE_WIDTH_PX = 699;

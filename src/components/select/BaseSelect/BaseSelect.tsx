@@ -16,7 +16,7 @@ import { useElementWidth } from './hooks';
 import { OptionList, IBaseOption } from './Options';
 import { SelectPlaceholder, SelectText } from './SelectElements';
 import { SelectIcons } from './SelectIcons';
-import { IBaseSelectProps, SIZE } from './types';
+import { IBaseSelectProps } from './types';
 
 import style from './BaseSelect.module.scss';
 
@@ -48,7 +48,7 @@ export const BaseSelect = <Option extends IBaseOption>({
   loadingMessage = defaultLoadingMessage,
   noOptionsMessage = defaultNoOptionsMessage,
   position,
-  size = SIZE.SM,
+  size = 'sm',
   customSelectInput,
   optionListHeader,
   optionListFooter,

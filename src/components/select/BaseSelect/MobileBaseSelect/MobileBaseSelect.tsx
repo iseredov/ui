@@ -11,7 +11,7 @@ import { areOptionsEqual } from '../helpers';
 import { defaultGetOptionId, defaultGetOptionName } from '../defaultValues';
 import { Option as MobileOption } from '../Options/Option';
 import { IBaseOption, IOptionProps } from '../Options/types';
-import { useMobileSelectMode } from './hooks';
+import { useMobileSelectMode } from './hooks/useMobileSelectMode';
 import { IMobileBaseSelectProps } from './types';
 
 import style from './MobileBaseSelect.module.scss';
@@ -60,8 +60,6 @@ export const MobileBaseSelect = <Option extends IBaseOption>({
     };
   }, [onCloseMenu]);
 
-  // useArrowBrowserNavigation(onCloseMenu);
-
   const amountSelectedValue = useMemo(() => {
     if (Array.isArray(selectedValue)) {
       return selectedValue.length;
@@ -78,18 +76,12 @@ export const MobileBaseSelect = <Option extends IBaseOption>({
 
           <div className={cx('row')}>
             <div className={cx('group')}>
-              {/* <ButtonIcon
-                className={cx('closeButton')}
-                name={ICON_NAME.SliderArrowDown}
-                color={BUTTON_COLOR.Gray}
-                onClick={onCloseMenu}
-              /> */}
               <Button
                 className={cx('closeButton')}
                 appearance="secondary"
                 onClick={onCloseMenu}
               >
-                <IconArrow />
+                <IconArrow rotate={90} />
               </Button>
               <p className={cx('name')}>
                 {name}{' '}

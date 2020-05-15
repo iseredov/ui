@@ -5,29 +5,24 @@ import {
   IOptionListProps,
 } from './Options';
 
-export enum POSITION {
-  Left = 'left',
-  Middle = 'middle',
-  Right = 'right',
-  Top = 'top',
-  Bottom = 'bottom',
-  TopLeft = 'topLeft',
-  TopRight = 'topRight',
-  TopMiddle = 'topMiddle',
-  TopMight = 'topMight',
-  MiddleLeft = 'middleLeft',
-  MiddleMiddle = 'middleMiddle',
-  MiddleRight = 'middleRight',
-  BottomLeft = 'bottomLeft',
-  BottomMiddle = 'bottomMiddle',
-  BottomRight = 'bottomRight',
-}
+export type SelectPosition =
+  | 'left'
+  | 'middle'
+  | 'right'
+  | 'top'
+  | 'bottom'
+  | 'topLeft'
+  | 'topRight'
+  | 'topMiddle'
+  | 'topMight'
+  | 'middleLeft'
+  | 'middleMiddle'
+  | 'middleRight'
+  | 'bottomLeft'
+  | 'bottomMiddle'
+  | 'bottomRight';
 
-export enum SIZE {
-  SM = 'sm',
-  NM = 'nm',
-  LG = 'lg',
-}
+export type SelectSize = 'sm' | 'nm' | 'lg';
 
 export interface ISelectClassNames {
   select?: IBaseSelectClassNames;
@@ -36,7 +31,7 @@ export interface ISelectClassNames {
 
 export interface IIconProps {
   className?: string;
-  size: SIZE;
+  size: SelectSize;
 }
 
 export interface IGeneralSelectProps<Option>
@@ -67,12 +62,12 @@ export interface IGeneralSelectProps<Option>
   /**
    * Размер (высота) селекта sm, nm, lg
    */
-  size?: SIZE;
+  size?: SelectSize;
   /**
    * Позиция селекта, необходима для закругления
    * определенных границ в зависимости от позиции
    */
-  position?: POSITION;
+  position?: SelectPosition;
   /**
    * placeholder для селекта
    */

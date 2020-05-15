@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames/bind';
 
-import { IIconProps, SIZE } from './types';
+import { IIconProps } from './types';
 
 import style from './BaseSelect.module.scss';
 
@@ -21,7 +21,7 @@ export const SelectText = ({
   children = '',
 }: TSelectTextProps) => (
   <>
-    {Icon && <Icon className={cx('icon', 'icon_beforeInput')} size={SIZE.NM} />}
+    {Icon && <Icon className={cx('icon', 'icon_beforeInput')} size="nm" />}
     <p
       className={cx(
         'selectText',
@@ -47,7 +47,7 @@ export const SelectPlaceholder = ({
   children,
 }: TSelectPlaceholderProps) => (
   <>
-    {Icon && <Icon className={cx('icon', 'icon_beforeInput')} size={SIZE.NM} />}
+    {Icon && <Icon className={cx('icon', 'icon_beforeInput')} size="nm" />}
     <div
       className={cx(
         'selectText',

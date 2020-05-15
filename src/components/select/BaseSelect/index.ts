@@ -9,7 +9,7 @@ export {
   defaultLoadingMessage,
 } from './defaultValues';
 
-export { SIZE } from './types';
+export { SelectSize } from './types';
 export {
   IBaseSelectClassNames,
   ICustomOption,

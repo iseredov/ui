@@ -1,0 +1,20 @@
+.track-vertical {
+  right: 4px;
+  bottom: 2px;
+  top: 2px;
+  border-radius: 50px;
+  margin: 2px 0;
+  z-index: 1233;
+}
+
+.theme_dark {
+  & > div {
+    background-color: rgba(#000, 12) !important;
+  }
+}
+
+.theme_light {
+  & > div {
+    background-color: rgba(#fff, 12) !important;
+  }
+}

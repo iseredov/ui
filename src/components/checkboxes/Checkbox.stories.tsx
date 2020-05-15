@@ -4,7 +4,7 @@ import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { Checkbox } from './Checkbox';
 
 export default {
-  title: 'Checkbox',
+  title: 'Cargomart/checkboxes/Checkbox',
   decorators: [withKnobs],
   parameters: {
     component: Checkbox,

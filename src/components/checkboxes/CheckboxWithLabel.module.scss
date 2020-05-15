@@ -1,4 +1,4 @@
-@import "../shared/vars";
+@import '../../shared/vars';
 
 .container {
   display: inline-flex;
@@ -23,7 +23,7 @@
   margin-left: $base-offset * 2;
 }
 
-.text{
+.text {
   margin-top: $base-offset / 2;
   margin-bottom: $base-offset / 2;
   font-size: 14px;

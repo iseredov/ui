@@ -1,5 +1,3 @@
-const path = require('path');
-
 const postCssLoaderConfig = {
   loader: require.resolve('postcss-loader'),
   options: {

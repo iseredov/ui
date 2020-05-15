@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 import { PopperProps, usePopper } from 'react-popper';
 
-import { Portal } from '../Portal';
+import { Portal } from './Portal';
 
 import s from './Tooltip.module.scss';
 import { stopBubbling } from '../shared/helpers';

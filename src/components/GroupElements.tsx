@@ -1,6 +1,6 @@
 import React, { Children, isValidElement, ReactNode, memo } from 'react';
-import { getGroupPosition } from './shared/helpers';
-import { TGroupPosition } from './shared/types';
+import { getGroupPosition } from '../shared/helpers';
+import { TGroupPosition } from '../shared/types';
 
 import s from './GroupElements.module.scss';
 
@@ -30,6 +30,7 @@ export const GroupElements = ({
       {items.map((item, index) => (
         <item.type
           {...item.props}
+          key={index}
           groupPositionH={
             type === 'horizontal'
               ? getGroupPosition(index, items.length)

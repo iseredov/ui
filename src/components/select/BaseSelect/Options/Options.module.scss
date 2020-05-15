@@ -1,0 +1,78 @@
+@import '../../../../shared/vars';
+
+.optionListWrapper {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
+  z-index: $z-index-select-optionList;
+  box-sizing: border-box;
+  padding: 8px 0;
+
+  &_topMargin {
+    margin-top: 5px;
+  }
+
+  &_bottomMargin {
+    margin-bottom: 5px;
+  }
+}
+
+.optionList {
+  float: left;
+  min-width: 100%;
+  padding-bottom: 0;
+  padding-top: 0;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+
+.noOptionMessageText {
+  padding: 0 4px 0 8px;
+}
+
+.option {
+  margin: 0;
+  list-style-type: none;
+  cursor: pointer;
+  display: flex;
+  font-size: inherit;
+  padding: 6px 12px;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  min-height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  &_mobile {
+    padding: 16px;
+    min-height: 48px;
+    font-size: 16px;
+    color: fade(black, 72);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+  }
+
+  &_hovered {
+    background-color: $hover;
+  }
+
+  &_selected {
+    background-color: $azure;
+    color: $white;
+
+    &:hover {
+      background-color: $azure;
+    }
+  }
+}

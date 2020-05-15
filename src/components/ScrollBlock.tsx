@@ -10,7 +10,7 @@ interface IProps extends ScrollbarProps {
   children: ReactNode;
   className?: string;
   theme?: 'light' | 'dark';
-  innerRef: RefObject<Scrollbars>;
+  innerRef?: RefObject<Scrollbars>;
 }
 
 export const ScrollBlock = ({

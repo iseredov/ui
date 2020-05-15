@@ -11,11 +11,9 @@ export interface ICheckboxWithLabelProps extends ICheckboxProps {
   className?: string;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   children: string | JSX.Element;
-  error?: boolean | string | void;
 }
 
 export const CheckboxWithLabel = ({
-  error,
   onChange = noop,
   className,
   children,

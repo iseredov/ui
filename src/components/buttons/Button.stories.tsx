@@ -4,7 +4,7 @@ import { Button } from './Button';
 import { GroupElements } from '../GroupElements';
 
 export default {
-  title: 'Button',
+  title: 'Cargomart/buttons/Button',
   decorators: [withKnobs],
   parameters: {
     component: Button,

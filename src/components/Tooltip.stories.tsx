@@ -5,7 +5,7 @@ import { Tooltip } from './Tooltip';
 import { Grid3x3 } from '../storybook/Grid3x3';
 
 export default {
-  title: 'Tooltip',
+  title: 'Cargomart/Tooltip',
   decorators: [withKnobs],
   parameters: {
     component: Tooltip,

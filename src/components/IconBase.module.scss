@@ -1,0 +1,27 @@
+.icon {
+  flex-grow: 0;
+  display: inline-block;
+  position: relative;
+}
+.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transition: transform 150ms ease-in;
+  &_rotate_0 {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  &_rotate_90 {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  &_rotate_180 {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  &_rotate_270 {
+    transform: translate(-50%, -50%) rotate(270deg);
+  }
+  &_rotate_360 {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

@@ -7,8 +7,8 @@ import React, {
 } from 'react';
 import noop from 'lodash/noop';
 import classNames from 'classnames/bind';
-import { getClassnameModifiers } from '../shared/helpers';
-import { TGroupPosition } from '../shared/types';
+import { getClassnameModifiers } from '../../shared/helpers';
+import { TGroupPosition } from '../../shared/types';
 
 import s from './Button.module.scss';
 

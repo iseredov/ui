@@ -26,3 +26,12 @@ export { IconSpinner, TIconSpinnerProps } from './components/icons/IconSpinner';
 
 export { Portal } from './components/Portal';
 export { ScrollBlock } from './components/ScrollBlock';
+
+/** selects */
+export {
+  BaseSelect,
+  OptionTemplate,
+  IBaseOption,
+  IOptionProps,
+} from './components/select/BaseSelect';
+export { Select, BaseSingleSelect } from './components/select/SingleSelect';

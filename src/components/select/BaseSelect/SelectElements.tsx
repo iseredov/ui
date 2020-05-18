@@ -3,7 +3,7 @@ import cn from 'classnames/bind';
 
 import { IIconProps } from './types';
 
-import style from './BaseSelect.module.scss';
+import s from './BaseSelect.module.scss';
 
 interface TSelectTextProps {
   className?: string;
@@ -12,7 +12,7 @@ interface TSelectTextProps {
   children?: string;
 }
 
-const cx = cn.bind(style);
+const cx = cn.bind(s);
 
 export const SelectText = ({
   className,

@@ -12,9 +12,9 @@ import {
   defaultLoadingMessage,
   defaultNoOptionsMessage,
 } from '../../defaultValues';
-import { hasWord } from '../helpers/hasWord';
-import { scrollTopIntoView } from '../helpers/scrollTopIntoView';
-import { switchSelectedOptions } from '../helpers/switchSelectedOptions';
+import { hasWord } from '../../helpers/hasWord';
+import { scrollTopIntoView } from './scrollTopIntoView';
+import { switchSelectedOptions } from '../../helpers/switchSelectedOptions';
 import { MobileBaseSelect } from '../MobileBaseSelect/MobileBaseSelect';
 import { OptionsScrollBlock } from './OptionsScrollBlock';
 import { IBaseOption, IOptionListProps } from './types';

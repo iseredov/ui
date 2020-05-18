@@ -5,7 +5,7 @@ import noop from 'lodash/noop';
 
 import { ScrollBlock } from '../../../ScrollBlock';
 
-import { areOptionsEqual } from '../helpers/areOptionsEqual';
+import { areOptionsEqual } from '../../helpers/areOptionsEqual';
 import {
   defaultGetOptionId,
   defaultGetOptionName,

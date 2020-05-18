@@ -11,8 +11,7 @@ import {
   defaultLoadingMessage,
   defaultNoOptionsMessage,
 } from '../defaultValues';
-import { getSelectClassNameWithModificators } from './helpers/getSelectClassNameWithModificators';
-import { useElementWidth } from './hooks';
+import { useElementWidth } from './useElementWidth';
 import { OptionList } from './Options/OptionList';
 import { IBaseOption } from './Options/types';
 import { SelectPlaceholder, SelectText } from './SelectElements';
@@ -134,14 +133,6 @@ export const BaseSelect = <Option extends IBaseOption>({
     getOptionName,
   ]);
 
-  const innerWrapperModifiers = {
-    position,
-    size,
-    isDisabled,
-    isFocused: isOpen,
-    hasError: Boolean(error),
-  };
-
   const { ref, width: selectWidth } = useElementWidth({
     needRecalculate: isOpen,
   });
@@ -172,6 +163,8 @@ export const BaseSelect = <Option extends IBaseOption>({
     selectWidth,
   ]);
 
+  const hasError = Boolean(error);
+
   return (
     <>
       {isOpen && !isMobile && (
@@ -193,7 +186,18 @@ export const BaseSelect = <Option extends IBaseOption>({
                 tabIndex={isDisabled ? -1 : tabIndex}
                 ref={ref}
                 className={cx(
-                  getSelectClassNameWithModificators(innerWrapperModifiers),
+                  {
+                    innerWrapper: true,
+                    [`innerWrapper_size_${size}`]: true,
+                    [`innerWrapper_radius_${position}`]: true,
+                    innerWrapper_focused: isOpen,
+                    innerWrapper_error: hasError,
+                    innerWrapper_focused_error: hasError && isOpen,
+                    // innerWrapper_readOnly: isReadOnly,
+                    innerWrapper_disabled: isDisabled,
+                    // innerWrapper_prefix: prefix,
+                    // innerWrapper_postfix: postfix,
+                  },
                   selectCn.innerWrapper
                 )}
                 data-name={dataName}

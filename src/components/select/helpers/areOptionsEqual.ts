@@ -1,4 +1,4 @@
-import { IBaseOption } from '../Options/types';
+import { IBaseOption } from '../BaseSelect/Options/types';
 
 type IGetOptionId<Option extends IBaseOption> = (option?: Option) => IdType;
 

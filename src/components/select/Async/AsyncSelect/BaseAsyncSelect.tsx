@@ -3,7 +3,7 @@ import noop from 'lodash/noop';
 import get from 'lodash/get';
 
 import { BaseSelect } from '../../BaseSelect/BaseSelect';
-import { areOptionsEqual } from '../../BaseSelect/helpers/areOptionsEqual';
+import { areOptionsEqual } from '../../helpers/areOptionsEqual';
 import { IBaseOption } from '../../BaseSelect/Options/types';
 
 import {
@@ -14,10 +14,17 @@ import {
 import { Footer } from '../components/Footer';
 import { MobileSelectInput } from '../components/MobileSelectInput';
 import { SelectInput } from '../components/SelectInput';
-import { addSelectedToOptions } from '../helpers/addSelectedToOptions';
-import { isScrolledToBottom } from '../helpers/isScrolledToBottom';
+import { addSelectedToOptions } from '../../helpers/addSelectedToOptions';
 import { useSearchLoadData } from '../hooks/useSearchLoadData';
 import { IBaseAsyncSelectProps } from './types';
+
+const THRESHOLD_HEIGHT = 30;
+
+export const isScrolledToBottom = (event: SyntheticEvent<HTMLDivElement>) => {
+  const { target } = event;
+  const { scrollHeight, scrollTop, offsetHeight } = target as any;
+  return scrollHeight - scrollTop - offsetHeight < THRESHOLD_HEIGHT;
+};
 
 export const BaseAsyncSelect = <Option extends IBaseOption>({
   classNames = {},

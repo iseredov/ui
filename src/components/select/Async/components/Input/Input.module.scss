@@ -1,0 +1,13 @@
+@import '../../../../../shared/vars';
+
+.suggestInput {
+  width: 100%;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  color: rgb(71, 83, 89);
+
+  &::placeholder {
+    color: rgba(black, 0.38);
+  }
+}

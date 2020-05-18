@@ -5,7 +5,7 @@ import noop from 'lodash/noop';
 
 import { ScrollBlock } from '../../../ScrollBlock';
 
-import { areOptionsEqual, switchSelectedOptions } from '../helpers';
+import { areOptionsEqual } from '../helpers';
 import {
   defaultGetOptionId,
   defaultGetOptionName,
@@ -38,16 +38,6 @@ export const OptionsScrollBlock = <T extends IBaseOption>({
   getOptionName = defaultGetOptionName,
   CustomOptionComponent,
 }: IOptionsScrollBlockProps<T>) => {
-  const handleChangeOption = useCallback(
-    (newSelectedOption: T) => {
-      const newSelectedOptions = Array.isArray(selectedValue)
-        ? switchSelectedOptions(selectedValue, newSelectedOption, getOptionId)
-        : [newSelectedOption];
-      onChange(newSelectedOptions);
-    },
-    [onChange, getOptionId, selectedValue]
-  );
-
   useEffect(() => {
     scheduleUpdate();
   }, [options.length, scheduleUpdate]);
@@ -74,7 +64,7 @@ export const OptionsScrollBlock = <T extends IBaseOption>({
         isMobile: false,
         isSelected,
         isHovered,
-        onClick: handleChangeOption,
+        onClick: onChange,
         onSetOptionHoverIndex,
       };
 
@@ -90,7 +80,7 @@ export const OptionsScrollBlock = <T extends IBaseOption>({
       optionHoverIndex,
       classNames,
       selectWidth,
-      handleChangeOption,
+      onChange,
       onSetOptionHoverIndex,
       getOptionId,
       getOptionName,

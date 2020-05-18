@@ -1,0 +1,22 @@
+.selectInputWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 2px 0;
+}
+
+.selectInput {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  min-width: 100px;
+  color: rgb(71, 83, 89);
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.38);
+  }
+}

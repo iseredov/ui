@@ -169,8 +169,6 @@ $focusedError-box-shadow-style: $error-box-shadow-style,
   position: relative;
 }
 
-$iconSize: 24px;
-
 .selectText {
   white-space: nowrap;
   overflow: hidden;
@@ -189,8 +187,8 @@ $iconSize: 24px;
   }
 
   &_icon {
-    left: $iconSize;
-    width: calc(100% - $iconSize);
+    left: 24px;
+    width: calc(100% - 24px);
   }
 }
 .iconsWrapper {

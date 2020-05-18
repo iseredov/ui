@@ -15,6 +15,7 @@ module.exports = {
     '@storybook/addon-docs',
     '@storybook/addon-knobs/register',
     '@storybook/addon-backgrounds/register',
+    '@storybook/addon-viewport/register',
   ],
   webpackFinal: async config => {
     // config.module.rules = config.module.rules.filter(

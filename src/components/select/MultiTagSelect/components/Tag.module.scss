@@ -1,0 +1,46 @@
+@import '../../../../shared/vars';
+
+.tag {
+  padding-left: 6px;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 3px;
+  background-color: $hover;
+  cursor: pointer;
+
+  &-text {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.72);
+  }
+
+  &-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    &_hover {
+      background-color: rgb(216, 227, 255);
+    }
+
+    &:hover {
+      background-color: rgb(216, 227, 255);
+    }
+  }
+
+  &-clear {
+    width: 16px;
+    height: 16px;
+  }
+}

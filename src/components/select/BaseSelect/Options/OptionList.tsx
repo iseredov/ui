@@ -12,7 +12,7 @@ import {
   defaultLoadingMessage,
   defaultNoOptionsMessage,
 } from '../defaultValues';
-import { hasWord, scrollTopIntoView } from '../helpers';
+import { hasWord, scrollTopIntoView, switchSelectedOptions } from '../helpers';
 import { MobileBaseSelect } from '../MobileBaseSelect';
 import { OptionsScrollBlock } from './OptionsScrollBlock';
 import { IBaseOption, IOptionListProps } from './types';
@@ -70,11 +70,21 @@ export const OptionList = <Option extends IBaseOption>({
     onSetOptionHoverIndex(nextIndex);
   }, [optionHoverIndex, optionsMaxIndex, onSetOptionHoverIndex]);
 
+  const handleChangeOption = useCallback(
+    (newSelectedOption: Option) => {
+      const newSelectedOptions = Array.isArray(value)
+        ? switchSelectedOptions(value, newSelectedOption, getOptionId)
+        : [newSelectedOption];
+      onChange(newSelectedOptions);
+    },
+    [onChange, getOptionId, value]
+  );
+
   const changeSelectedOption = useCallback(() => {
     if (optionHoverIndex in options) {
-      onChange([options[optionHoverIndex]]);
+      handleChangeOption(options[optionHoverIndex]);
     }
-  }, [options, optionHoverIndex, onChange]);
+  }, [options, optionHoverIndex, handleChangeOption]);
 
   const handleDocumentKeyDown = useCallback(
     (event: KeyboardEvent) => {
@@ -130,7 +140,6 @@ export const OptionList = <Option extends IBaseOption>({
     getOptionName,
     onSetOptionHoverIndex,
     onScrollOptionList,
-    onChange,
     CustomOptionComponent,
   };
 
@@ -142,6 +151,7 @@ export const OptionList = <Option extends IBaseOption>({
           {...mobileProps}
           name={mobileName}
           hasClearButton={hasClearIcon}
+          onChange={onChange}
           onClear={onClear}
           onCloseMenu={onCloseMenu}
         />
@@ -177,6 +187,7 @@ export const OptionList = <Option extends IBaseOption>({
                 showLoadingMessage={showLoadingMessage}
                 noOptionsMessage={noOptionsMessage}
                 loadingMessage={loadingMessage}
+                onChange={handleChangeOption}
                 scheduleUpdate={forceUpdate}
               />
 

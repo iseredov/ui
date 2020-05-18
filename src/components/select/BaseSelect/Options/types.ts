@@ -135,7 +135,7 @@ export interface IOptionsScrollBlockProps<Option>
   /**
    * Коллбек, выполняемый при выборе опции
    */
-  onChange: (options: Option[]) => void;
+  onChange: (options: Option) => void;
   /**
    * Коллбек, выполняемый при скролле выпадающего списка
    */
@@ -149,7 +149,7 @@ export interface IOptionsScrollBlockProps<Option>
 export interface IOptionListProps<Option>
   extends Omit<
       IOptionsScrollBlockProps<Option>,
-      'hoverOptionRef' | 'scheduleUpdate'
+      'hoverOptionRef' | 'scheduleUpdate' | 'onChange'
     >,
     IMobileViewProps {
   /**
@@ -160,6 +160,10 @@ export interface IOptionListProps<Option>
    * Наличие иконки очистки
    */
   hasClearIcon: boolean;
+  /**
+   * Коллбек, выполняемый при выборе опции
+   */
+  onChange: (options: Option[]) => void;
   /**
    * Коллбек, выполняемый при нажатие иконки очистки
    */

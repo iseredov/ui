@@ -1,4 +1,4 @@
-import { IBaseOption } from '../BaseSelect/Options/types';
+import { IBaseOption } from '../Options/types';
 import { areOptionsEqual } from './areOptionsEqual';
 
 export const switchSelectedOptions = <Option extends IBaseOption>(

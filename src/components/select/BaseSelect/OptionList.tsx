@@ -3,23 +3,23 @@ import { Popper, PopperChildrenProps } from 'react-popper';
 import classNames from 'classnames/bind';
 import noop from 'lodash/noop';
 
-import { Portal } from '../../../Portal';
-import { KEY_CODE } from '../../../../shared/constants';
+import { Portal } from '../../Portal';
+import { KEY_CODE } from '../../../shared/constants';
 
 import {
   defaultGetOptionId,
   defaultGetOptionName,
   defaultLoadingMessage,
   defaultNoOptionsMessage,
-} from '../../defaultValues';
-import { hasWord } from '../../helpers/hasWord';
+} from '../defaultValues';
+import { hasWord } from '../helpers/hasWord';
 import { scrollTopIntoView } from './scrollTopIntoView';
-import { switchSelectedOptions } from '../../helpers/switchSelectedOptions';
-import { MobileBaseSelect } from '../MobileBaseSelect/MobileBaseSelect';
+import { switchSelectedOptions } from '../helpers/switchSelectedOptions';
+import { MobileBaseSelect } from './MobileBaseSelect/MobileBaseSelect';
 import { OptionsScrollBlock } from './OptionsScrollBlock';
-import { IBaseOption, IOptionListProps } from './types';
+import { IBaseOption, IOptionListProps } from '../Options/types';
 
-import style from './Options.module.scss';
+import style from './BaseSelect.module.scss';
 
 const cx = classNames.bind(style);
 

@@ -29,11 +29,8 @@ export { ScrollBlock } from './components/ScrollBlock';
 
 /** selects */
 export { BaseSelect } from './components/select/BaseSelect/BaseSelect';
-export { OptionTemplate } from './components/select/BaseSelect/Options/OptionTemplate';
-export {
-  IBaseOption,
-  IOptionProps,
-} from './components/select/BaseSelect/Options/types';
+export { OptionTemplate } from './components/select/Options/OptionTemplate';
+export { IBaseOption, IOptionProps } from './components/select/Options/types';
 
 export { Select } from './components/select/SingleSelect/SingleSelect';
 export { BaseSingleSelect } from './components/select/SingleSelect/BaseSingleSelect';

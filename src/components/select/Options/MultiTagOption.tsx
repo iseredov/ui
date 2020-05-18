@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 
 import { IconPin } from '../../icons/IconPin';
-import { OptionTemplate } from '../BaseSelect/Options/OptionTemplate';
-import { IBaseOption, IOptionProps } from '../BaseSelect/Options/types';
+import { OptionTemplate } from './OptionTemplate';
+import { IBaseOption, IOptionProps } from './types';
 
 import s from './MultiTagOption.module.scss';
 

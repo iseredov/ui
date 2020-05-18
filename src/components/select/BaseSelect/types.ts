@@ -3,7 +3,7 @@ import {
   IBaseSelectClassNames,
   IOptionClassNames,
   IOptionListProps,
-} from './Options/types';
+} from '../Options/types';
 
 export type SelectPosition =
   | 'left'

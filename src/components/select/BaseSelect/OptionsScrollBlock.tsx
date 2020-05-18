@@ -3,19 +3,23 @@ import classNames from 'classnames/bind';
 import debounce from 'lodash/debounce';
 import noop from 'lodash/noop';
 
-import { ScrollBlock } from '../../../ScrollBlock';
+import { ScrollBlock } from '../../ScrollBlock';
 
-import { areOptionsEqual } from '../../helpers/areOptionsEqual';
+import { areOptionsEqual } from '../helpers/areOptionsEqual';
 import {
   defaultGetOptionId,
   defaultGetOptionName,
   defaultLoadingMessage,
   defaultNoOptionsMessage,
-} from '../../defaultValues';
-import { IBaseOption, IOptionProps, IOptionsScrollBlockProps } from './types';
-import { Option } from './Option';
+} from '../defaultValues';
+import {
+  IBaseOption,
+  IOptionProps,
+  IOptionsScrollBlockProps,
+} from '../Options/types';
+import { Option } from '../Options/Option';
 
-import style from './Options.module.scss';
+import style from './BaseSelect.module.scss';
 
 const cx = classNames.bind(style);
 

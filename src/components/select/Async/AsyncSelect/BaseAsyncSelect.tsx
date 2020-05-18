@@ -4,7 +4,7 @@ import get from 'lodash/get';
 
 import { BaseSelect } from '../../BaseSelect/BaseSelect';
 import { areOptionsEqual } from '../../helpers/areOptionsEqual';
-import { IBaseOption } from '../../BaseSelect/Options/types';
+import { IBaseOption } from '../../Options/types';
 
 import {
   defaultGetOptionId,

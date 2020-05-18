@@ -4,7 +4,7 @@ import noop from 'lodash/noop';
 
 import { IOptionProps, IBaseOption } from './types';
 
-import s from './Options.module.scss';
+import s from './OptionTemplate.module.scss';
 
 const cx = classNames.bind(s);
 

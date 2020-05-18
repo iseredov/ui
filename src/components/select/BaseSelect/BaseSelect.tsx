@@ -12,8 +12,8 @@ import {
   defaultNoOptionsMessage,
 } from '../defaultValues';
 import { useElementWidth } from './useElementWidth';
-import { OptionList } from './Options/OptionList';
-import { IBaseOption } from './Options/types';
+import { OptionList } from './OptionList';
+import { IBaseOption } from '../Options/types';
 import { SelectPlaceholder, SelectText } from './SelectElements';
 import { SelectIcons } from './SelectIcons';
 import { IBaseSelectProps } from './types';
@@ -193,10 +193,7 @@ export const BaseSelect = <Option extends IBaseOption>({
                     innerWrapper_focused: isOpen,
                     innerWrapper_error: hasError,
                     innerWrapper_focused_error: hasError && isOpen,
-                    // innerWrapper_readOnly: isReadOnly,
                     innerWrapper_disabled: isDisabled,
-                    // innerWrapper_prefix: prefix,
-                    // innerWrapper_postfix: postfix,
                   },
                   selectCn.innerWrapper
                 )}

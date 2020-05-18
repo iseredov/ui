@@ -9,8 +9,8 @@ import { IconArrow } from '../../../../components/icons/IconArrow';
 
 import { areOptionsEqual } from '../../helpers/areOptionsEqual';
 import { defaultGetOptionId, defaultGetOptionName } from '../../defaultValues';
-import { Option as MobileOption } from '../Options/Option';
-import { IBaseOption, IOptionProps } from '../Options/types';
+import { Option as MobileOption } from '../../Options/Option';
+import { IBaseOption, IOptionProps } from '../../Options/types';
 import { useMobileSelectMode } from './useMobileSelectMode';
 import { IMobileBaseSelectProps } from './types';
 

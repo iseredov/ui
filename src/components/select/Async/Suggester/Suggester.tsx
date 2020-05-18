@@ -3,7 +3,7 @@ import noop from 'lodash/noop';
 import get from 'lodash/get';
 
 import { BaseSelect } from '../../BaseSelect/BaseSelect';
-import { IBaseOption } from '../../BaseSelect/Options/types';
+import { IBaseOption } from '../../Options/types';
 import { defaultGetOptionName } from '../../defaultValues';
 import { SelectInput } from '../components/SelectInput';
 import { useSearchLoadData } from '../hooks/useSearchLoadData';

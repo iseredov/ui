@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { useIsMobileSize } from '../../../shared/useIsMobileSize';
-import { IBaseOption } from '../BaseSelect/Options/types';
+import { IBaseOption } from '../Options/types';
 import { IMultiSelectProps } from '../MultiSelect/types';
 import { BaseMultiTagSelect } from './BaseMultiTagSelect';
 

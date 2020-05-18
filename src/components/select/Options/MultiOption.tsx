@@ -4,8 +4,8 @@ import cn from 'classnames/bind';
 import { Checkbox } from '../../checkboxes/Checkbox';
 import { IconDone } from '../../icons/IconDone';
 
-import { OptionTemplate } from '../BaseSelect/Options/OptionTemplate';
-import { IBaseOption, IOptionProps } from '../BaseSelect/Options/types';
+import { OptionTemplate } from './OptionTemplate';
+import { IBaseOption, IOptionProps } from './types';
 
 import multiOptionStyle from './MultiOption.module.scss';
 

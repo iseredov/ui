@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 
-import { IBaseOption } from '../Options/types';
+import { IBaseOption } from '../../Options/types';
 
 type ISingleSelectModeResult<Option> = (option: Option) => void;
 

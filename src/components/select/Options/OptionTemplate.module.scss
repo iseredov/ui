@@ -1,35 +1,4 @@
-@import '../../../../shared/vars';
-
-.optionListWrapper {
-  background-color: white;
-  border-radius: 3px;
-  box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
-  z-index: $z-index-select-optionList;
-  box-sizing: border-box;
-  padding: 8px 0;
-
-  &_topMargin {
-    margin-top: 5px;
-  }
-
-  &_bottomMargin {
-    margin-bottom: 5px;
-  }
-}
-
-.optionList {
-  float: left;
-  min-width: 100%;
-  padding-bottom: 0;
-  padding-top: 0;
-  position: relative;
-  -webkit-overflow-scrolling: touch;
-  box-sizing: border-box;
-}
-
-.noOptionMessageText {
-  padding: 0 4px 0 8px;
-}
+@import '../../../shared/vars';
 
 .option {
   margin: 0;

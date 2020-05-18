@@ -2,10 +2,14 @@ import React, { useCallback, SyntheticEvent } from 'react';
 import cn from 'classnames/bind';
 
 import { IconClear } from '../../icons/IconClear';
-import { ITag } from '../MultiTagSelect/BaseMultiTagSelect';
 import s from './Tag.module.scss';
 
 const cx = cn.bind(s);
+
+export interface ITag {
+  id: IdType;
+  name: string;
+}
 
 interface IProps extends ITag {
   isHovered: boolean;

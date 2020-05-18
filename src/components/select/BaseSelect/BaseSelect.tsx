@@ -10,7 +10,7 @@ import {
   defaultGetOptionName,
   defaultLoadingMessage,
   defaultNoOptionsMessage,
-} from '../defaultValues';
+} from '../helpers/defaultValues';
 import { useElementWidth } from './useElementWidth';
 import { OptionList } from './OptionList';
 import { IBaseOption } from '../Options/types';

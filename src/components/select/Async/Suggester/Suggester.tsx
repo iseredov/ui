@@ -4,7 +4,7 @@ import get from 'lodash/get';
 
 import { BaseSelect } from '../../BaseSelect/BaseSelect';
 import { IBaseOption } from '../../Options/types';
-import { defaultGetOptionName } from '../../defaultValues';
+import { defaultGetOptionName } from '../../helpers/defaultValues';
 import { SelectInput } from '../components/SelectInput';
 import { useSearchLoadData } from '../hooks/useSearchLoadData';
 import { ISuggesterProps } from './types';

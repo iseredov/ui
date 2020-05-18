@@ -9,7 +9,7 @@ import {
   text,
 } from '@storybook/addon-knobs';
 
-import { defaultOptionList, selectSize } from '../storyHelpers';
+import { defaultOptionList, selectSize } from '../helpers/storyHelpers';
 import { Grid3x3 } from '../../../storybook/Grid3x3';
 
 import { Select } from './SingleSelect';

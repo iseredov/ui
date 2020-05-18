@@ -3,18 +3,16 @@ import keyBy from 'lodash/keyBy';
 
 import { MobileSelectInput } from '../Async/components/MobileSelectInput';
 import { IBaseOption } from '../Options/types';
-import { defaultGetOptionId, defaultGetOptionName } from '../defaultValues';
-import { BaseMultiSelect } from '../MultiSelect/BaseMultiSelect';
-import { IBaseMultiSelectProps } from '../MultiSelect/types';
+import {
+  defaultGetOptionId,
+  defaultGetOptionName,
+} from '../helpers/defaultValues';
+import { BaseMultiSelect } from './BaseMultiSelect';
+import { IBaseMultiSelectProps } from './types';
 import { MultiTagSelectInput } from '../components/MultiTagSelectInput';
 import { MultiTagOption } from '../Options/MultiTagOption';
 
 const NOT_SELECTED_HOVER_INDEX = -1;
-
-export interface ITag {
-  id: IdType;
-  name: string;
-}
 
 export const BaseMultiTagSelect = <Option extends IBaseOption>({
   selectedOptions,
@@ -71,7 +69,7 @@ export const BaseMultiTagSelect = <Option extends IBaseOption>({
     [options, selectedOptionsHashMap, getOptionId]
   );
 
-  const selectedTags: ITag[] = useMemo(
+  const selectedTags = useMemo(
     () =>
       selectedOptions.map(option => ({
         id: getOptionId(option),

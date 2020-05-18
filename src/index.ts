@@ -40,6 +40,6 @@ export { Suggester } from './components/select/Async//Suggester/Suggester';
 export { useReloadData } from './components/select/Async/hooks/useReloadData';
 
 export { MultiSelect } from './components/select/MultiSelect/MultiSelect';
-export { MultiTagSelect } from './components/select/MultiTagSelect/MultiTagSelect';
+export { MultiTagSelect } from './components/select/MultiSelect/MultiTagSelect';
 export { BaseMultiSelect } from './components/select/MultiSelect/BaseMultiSelect';
-export { BaseMultiTagSelect } from './components/select/MultiTagSelect/BaseMultiTagSelect';
+export { BaseMultiTagSelect } from './components/select/MultiSelect/BaseMultiTagSelect';

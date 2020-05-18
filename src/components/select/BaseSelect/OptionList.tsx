@@ -11,7 +11,7 @@ import {
   defaultGetOptionName,
   defaultLoadingMessage,
   defaultNoOptionsMessage,
-} from '../defaultValues';
+} from '../helpers/defaultValues';
 import { hasWord } from '../helpers/hasWord';
 import { scrollTopIntoView } from './scrollTopIntoView';
 import { switchSelectedOptions } from '../helpers/switchSelectedOptions';

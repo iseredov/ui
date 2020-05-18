@@ -10,7 +10,7 @@ import {
   defaultGetOptionId,
   defaultGetOptionName,
   defaultNoOptionsMessage,
-} from '../../defaultValues';
+} from '../../helpers/defaultValues';
 import { Footer } from '../components/Footer';
 import { MobileSelectInput } from '../components/MobileSelectInput';
 import { SelectInput } from '../components/SelectInput';

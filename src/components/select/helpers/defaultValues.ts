@@ -1,6 +1,6 @@
 import get from 'lodash/get';
 
-import { IBaseOption } from './Options/types';
+import { IBaseOption } from '../Options/types';
 
 export const defaultGetOptionId = (option?: IBaseOption) =>
   get(option, 'id', '');

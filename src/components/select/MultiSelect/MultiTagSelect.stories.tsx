@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions';
 import * as knobs from '@storybook/addon-knobs';
 
 import { MultiTagSelect } from './MultiTagSelect';
-import { selectSize, defaultOptionList } from './../storyHelpers';
+import { selectSize, defaultOptionList } from '../helpers/storyHelpers';
 import { Grid3x3 } from '../../../storybook/Grid3x3';
 import { SelectSize } from '../BaseSelect/types';
 

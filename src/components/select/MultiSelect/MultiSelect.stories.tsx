@@ -5,7 +5,7 @@ import * as knobs from '@storybook/addon-knobs';
 import { Grid3x3 } from '../../../storybook/Grid3x3';
 
 import { MultiSelect } from './MultiSelect';
-import { defaultOptionList, selectSize } from '../storyHelpers';
+import { defaultOptionList, selectSize } from '../helpers/storyHelpers';
 import { SelectSize } from '../BaseSelect/types';
 
 export default {

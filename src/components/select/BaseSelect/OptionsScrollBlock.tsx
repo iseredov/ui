@@ -11,7 +11,7 @@ import {
   defaultGetOptionName,
   defaultLoadingMessage,
   defaultNoOptionsMessage,
-} from '../defaultValues';
+} from '../helpers/defaultValues';
 import {
   IBaseOption,
   IOptionProps,

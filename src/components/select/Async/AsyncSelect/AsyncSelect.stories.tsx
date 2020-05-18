@@ -7,7 +7,7 @@ import {
   selectSize,
   defaultOptionList,
   mockLoadOptions,
-} from '../../storyHelpers';
+} from '../../helpers/storyHelpers';
 
 import { Grid3x3 } from '../../../../storybook/Grid3x3';
 import { SelectSize } from '../../BaseSelect/types';

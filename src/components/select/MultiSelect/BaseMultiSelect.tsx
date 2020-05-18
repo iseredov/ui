@@ -7,7 +7,7 @@ import {
   defaultGetOptionId,
   defaultGetOptionName,
   defaultNoOptionsMessage,
-} from '../defaultValues';
+} from '../helpers/defaultValues';
 import { SelectPlaceholder, SelectText } from '../BaseSelect/SelectElements';
 import { MultiOption } from '../Options/MultiOption';
 import { IBaseMultiSelectProps } from './types';

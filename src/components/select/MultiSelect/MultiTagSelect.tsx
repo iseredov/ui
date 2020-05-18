@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { useIsMobileSize } from '../../../shared/useIsMobileSize';
 import { IBaseOption } from '../Options/types';
-import { IMultiSelectProps } from '../MultiSelect/types';
+import { IMultiSelectProps } from './types';
 import { BaseMultiTagSelect } from './BaseMultiTagSelect';
 
 export const MultiTagSelect = <Option extends IBaseOption>({

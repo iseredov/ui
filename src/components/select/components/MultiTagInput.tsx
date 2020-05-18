@@ -8,7 +8,7 @@ import React, {
 
 import { KEY_CODE } from '../../../shared/constants';
 import { SelectPlaceholder } from '../BaseSelect/SelectElements';
-import { ITag } from '../MultiTagSelect/BaseMultiTagSelect';
+import { ITag } from './Tag';
 
 import s from './MultiTagInput.module.scss';
 

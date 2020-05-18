@@ -12,7 +12,7 @@ interface IProps {
   onChange: (value: string) => void;
 }
 
-export const BaseInput = ({
+export const NoMemoInput = ({
   className,
   placeholder,
   value,
@@ -42,4 +42,4 @@ export const BaseInput = ({
   );
 };
 
-export const Input = memo(BaseInput) as typeof BaseInput;
+export const Input = memo(NoMemoInput) as typeof NoMemoInput;

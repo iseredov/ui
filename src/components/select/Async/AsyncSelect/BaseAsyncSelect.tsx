@@ -11,9 +11,9 @@ import {
   defaultGetOptionName,
   defaultNoOptionsMessage,
 } from '../../helpers/defaultValues';
-import { Footer } from '../components/Footer';
-import { MobileSelectInput } from '../components/MobileSelectInput';
-import { SelectInput } from '../components/SelectInput';
+import { Footer } from '../../components/Footer';
+import { MobileSelectInput } from '../../components/MobileSelectInput';
+import { SelectInput } from '../../components/SelectInput';
 import { addSelectedToOptions } from '../../helpers/addSelectedToOptions';
 import { useSearchLoadData } from '../hooks/useSearchLoadData';
 import { IBaseAsyncSelectProps } from './types';

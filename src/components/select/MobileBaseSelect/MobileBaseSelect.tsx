@@ -2,18 +2,18 @@ import React, { useMemo, useEffect } from 'react';
 import cn from 'classnames/bind';
 import noop from 'lodash/noop';
 
-import { Portal } from '../../../../components/Portal';
-import { Button } from '../../../../components/buttons/Button';
-import { ScrollBlock } from '../../../../components/ScrollBlock';
-import { IconArrow } from '../../../../components/icons/IconArrow';
+import { Portal } from '../../Portal';
+import { Button } from '../../buttons/Button';
+import { ScrollBlock } from '../../ScrollBlock';
+import { IconArrow } from '../../icons/IconArrow';
 
-import { areOptionsEqual } from '../../helpers/areOptionsEqual';
+import { areOptionsEqual } from '../helpers/areOptionsEqual';
 import {
   defaultGetOptionId,
   defaultGetOptionName,
-} from '../../helpers/defaultValues';
-import { Option as MobileOption } from '../../Options/Option';
-import { IBaseOption, IOptionProps } from '../../Options/types';
+} from '../helpers/defaultValues';
+import { Option as MobileOption } from '../Options/Option';
+import { IBaseOption, IOptionProps } from '../Options/types';
 import { useMobileSelectMode } from './useMobileSelectMode';
 import { IMobileBaseSelectProps } from './types';
 

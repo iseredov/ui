@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks';
 
-import { useLoadData } from '.';
+import { useLoadData } from './useLoadData';
 
 describe('useLoadData', () => {
   it('Проверка корректности работы debounce', async () => {

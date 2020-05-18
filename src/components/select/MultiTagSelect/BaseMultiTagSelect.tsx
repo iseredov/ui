@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import keyBy from 'lodash/keyBy';
 
-import { MobileSelectInput } from '../Async/components/SelectInput';
+import { MobileSelectInput } from '../Async/components/MobileSelectInput';
 import { IBaseOption } from '../BaseSelect/Options/types';
 import { defaultGetOptionId, defaultGetOptionName } from '../defaultValues';
 import { BaseMultiSelect } from '../MultiSelect/BaseMultiSelect';

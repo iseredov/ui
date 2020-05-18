@@ -40,7 +40,7 @@ export { BaseSingleSelect } from './components/select/SingleSelect/BaseSingleSel
 export { AsyncSelect } from './components/select/Async/AsyncSelect/AsyncSelect';
 export { BaseAsyncSelect } from './components/select/Async/AsyncSelect/BaseAsyncSelect';
 export { Suggester } from './components/select/Async//Suggester/Suggester';
-export { useReloadData } from './components/select/Async/hooks';
+export { useReloadData } from './components/select/Async/hooks/useReloadData';
 
 export { MultiSelect } from './components/select/MultiSelect/MultiSelect';
 export { MultiTagSelect } from './components/select/MultiTagSelect/MultiTagSelect';

@@ -1,9 +1,9 @@
 import React, { memo, useCallback, ChangeEvent } from 'react';
 import cn from 'classnames/bind';
 
-import { IconClear } from '../../../../icons/IconClear';
-import { IconSpinner } from '../../../../icons/IconSpinner';
-import { IIconProps } from '../../../BaseSelect/types';
+import { IconClear } from '../../../icons/IconClear';
+import { IconSpinner } from '../../../icons/IconSpinner';
+import { IIconProps } from '../../BaseSelect/types';
 
 import style from './SelectInput.module.scss';
 

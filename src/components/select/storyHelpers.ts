@@ -1,7 +1,7 @@
 import {
   ILoadOptionParams,
   ILoadOptionsData,
-} from './Async/hooks/useSearchLoadData/useSearchLoadData';
+} from './Async/hooks/useSearchLoadData';
 
 export const selectSize = {
   sm: 'sm',

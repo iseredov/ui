@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks';
 
-import { useSearchLoadData } from '.';
+import { useSearchLoadData } from './useSearchLoadData';
 
 describe('useSearchLoadData', () => {
   it('Проверка корректности начальной загрузки опций', async () => {

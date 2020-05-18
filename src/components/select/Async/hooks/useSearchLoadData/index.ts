@@ -1,1 +1,0 @@
-export { useSearchLoadData } from './useSearchLoadData';

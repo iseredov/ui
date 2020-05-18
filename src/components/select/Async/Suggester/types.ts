@@ -6,7 +6,7 @@ import {
 import {
   ILoadOptionParams,
   ILoadOptionsData,
-} from '../hooks/useSearchLoadData/useSearchLoadData';
+} from '../hooks/useSearchLoadData';
 import { IGeneralSingleSelectProps } from '../../SingleSelect/types';
 
 export interface ISuggesterProps<Option>

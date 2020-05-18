@@ -6,7 +6,7 @@ import { BaseSelect } from '../../BaseSelect/BaseSelect';
 import { IBaseOption } from '../../BaseSelect/Options/types';
 import { defaultGetOptionName } from '../../defaultValues';
 import { SelectInput } from '../components/SelectInput';
-import { useSearchLoadData } from '../hooks';
+import { useSearchLoadData } from '../hooks/useSearchLoadData';
 import { ISuggesterProps } from './types';
 
 export const Suggester = <Option extends IBaseOption>({

@@ -1,1 +1,0 @@
-export { useLoadData } from './useLoadData';

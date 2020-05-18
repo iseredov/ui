@@ -2,9 +2,9 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import debounce from 'lodash/debounce';
 import get from 'lodash/get';
 
-import { useLoadData } from '../useLoadData';
+import { useLoadData } from './useLoadData';
 
-import { IBaseOption } from '../../../BaseSelect/Options/types';
+import { IBaseOption } from '../../BaseSelect/Options/types';
 
 export interface ILoadOptionParams {
   search: string;

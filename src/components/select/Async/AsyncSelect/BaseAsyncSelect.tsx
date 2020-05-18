@@ -12,9 +12,11 @@ import {
   defaultNoOptionsMessage,
 } from '../../defaultValues';
 import { Footer } from '../components/Footer';
-import { MobileSelectInput, SelectInput } from '../components/SelectInput';
-import { addSelectedToOptions, isScrolledToBottom } from '../helpers';
-import { useSearchLoadData } from '../hooks';
+import { MobileSelectInput } from '../components/MobileSelectInput';
+import { SelectInput } from '../components/SelectInput';
+import { addSelectedToOptions } from '../helpers/addSelectedToOptions';
+import { isScrolledToBottom } from '../helpers/isScrolledToBottom';
+import { useSearchLoadData } from '../hooks/useSearchLoadData';
 import { IBaseAsyncSelectProps } from './types';
 
 export const BaseAsyncSelect = <Option extends IBaseOption>({

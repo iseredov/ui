@@ -1,14 +1,11 @@
 import React, { memo } from 'react';
 import cn from 'classnames/bind';
 
-import { IIconProps } from '../../../BaseSelect/types';
-import {
-  SelectPlaceholder,
-  SelectText,
-} from '../../../BaseSelect/SelectElements';
-import { Input } from '../Input';
+import { IIconProps } from '../../BaseSelect/types';
+import { SelectPlaceholder, SelectText } from '../../BaseSelect/SelectElements';
+import { Input } from './Input';
 
-import baseSelectStyles from '../../../BaseSelect/BaseSelect.module.scss';
+import baseSelectStyles from '../../BaseSelect/BaseSelect.module.scss';
 import style from './SelectInput.module.scss';
 
 const cx = cn.bind(style);

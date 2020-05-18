@@ -3,9 +3,9 @@ import { action } from '@storybook/addon-actions';
 import * as knobs from '@storybook/addon-knobs';
 
 import { Suggester } from './Suggester';
-import { selectSize, mockLoadOptions } from '../../helpers/storyHelpers';
-import { Grid3x3 } from '../../../../storybook/Grid3x3';
-import { SelectSize } from '../../BaseSelect/types';
+import { selectSize, mockLoadOptions } from '../helpers/storyHelpers';
+import { Grid3x3 } from '../../../storybook/Grid3x3';
+import { SelectSize } from '../BaseSelect/types';
 
 const loadData = mockLoadOptions();
 

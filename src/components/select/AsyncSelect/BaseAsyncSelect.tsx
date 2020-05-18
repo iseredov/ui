@@ -2,21 +2,21 @@ import React, { useCallback, useEffect, useState, SyntheticEvent } from 'react';
 import noop from 'lodash/noop';
 import get from 'lodash/get';
 
-import { BaseSelect } from '../../BaseSelect/BaseSelect';
-import { areOptionsEqual } from '../../helpers/areOptionsEqual';
-import { IBaseOption } from '../../Options/types';
+import { BaseSelect } from '../BaseSelect/BaseSelect';
+import { areOptionsEqual } from '../helpers/areOptionsEqual';
+import { IBaseOption } from '../Options/types';
 
 import {
   defaultGetOptionId,
   defaultGetOptionName,
   defaultNoOptionsMessage,
-} from '../../helpers/defaultValues';
-import { Footer } from '../../components/Footer';
-import { MobileSelectInput } from '../../components/MobileSelectInput';
-import { SelectInput } from '../../components/SelectInput';
-import { addSelectedToOptions } from '../../helpers/addSelectedToOptions';
-import { useSearchLoadData } from '../hooks/useSearchLoadData';
-import { IBaseAsyncSelectProps } from './types';
+} from '../helpers/defaultValues';
+import { Footer } from '../components/Footer';
+import { MobileSelectInput } from '../components/MobileSelectInput';
+import { SelectInput } from '../components/SelectInput';
+import { addSelectedToOptions } from '../helpers/addSelectedToOptions';
+import { useSearchLoadData } from './hooks/useSearchLoadData';
+import { IBaseAsyncSelectProps } from './AsyncSelectTypes';
 
 const THRESHOLD_HEIGHT = 30;
 

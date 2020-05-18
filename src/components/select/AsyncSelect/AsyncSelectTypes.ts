@@ -1,8 +1,5 @@
-import { IGeneralSelectProps, ISelectClassNames } from '../../BaseSelect/types';
-import {
-  ILoadOptionParams,
-  ILoadOptionsData,
-} from '../hooks/useSearchLoadData';
+import { IGeneralSelectProps, ISelectClassNames } from '../BaseSelect/types';
+import { ILoadOptionParams, ILoadOptionsData } from './hooks/useSearchLoadData';
 
 export interface IGeneralAsyncSelectProps<Option>
   extends Omit<

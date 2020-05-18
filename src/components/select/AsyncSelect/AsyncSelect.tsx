@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import { useIsMobileSize } from '../../../../shared/useIsMobileSize';
-import { IBaseOption } from '../../Options/types';
+import { useIsMobileSize } from '../../../shared/useIsMobileSize';
+import { IBaseOption } from '../Options/types';
 import { BaseAsyncSelect } from './BaseAsyncSelect';
-import { IAsyncSelectProps } from './types';
+import { IAsyncSelectProps } from './AsyncSelectTypes';
 
 export const AsyncSelect = <Option extends IBaseOption>({
   isInitialOpen = false,

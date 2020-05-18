@@ -7,10 +7,10 @@ import {
   selectSize,
   defaultOptionList,
   mockLoadOptions,
-} from '../../helpers/storyHelpers';
+} from '../helpers/storyHelpers';
 
-import { Grid3x3 } from '../../../../storybook/Grid3x3';
-import { SelectSize } from '../../BaseSelect/types';
+import { Grid3x3 } from '../../../storybook/Grid3x3';
+import { SelectSize } from '../BaseSelect/types';
 
 const optionList = Array(...new Array(100)).map((_: number, index: number) => ({
   id: index + 1,

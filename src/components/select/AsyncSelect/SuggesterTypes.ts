@@ -2,12 +2,9 @@ import {
   ISelectClassNames,
   SelectSize,
   SelectPosition,
-} from '../../BaseSelect/types';
-import {
-  ILoadOptionParams,
-  ILoadOptionsData,
-} from '../hooks/useSearchLoadData';
-import { IGeneralSingleSelectProps } from '../../SingleSelect/types';
+} from '../BaseSelect/types';
+import { ILoadOptionParams, ILoadOptionsData } from './hooks/useSearchLoadData';
+import { IGeneralSingleSelectProps } from '../SingleSelect/types';
 
 export interface ISuggesterProps<Option>
   extends Omit<

@@ -7,8 +7,8 @@ import { Button } from '../../../../components/buttons/Button';
 import { ScrollBlock } from '../../../../components/ScrollBlock';
 import { IconArrow } from '../../../../components/icons/IconArrow';
 
-import { areOptionsEqual } from '../helpers';
-import { defaultGetOptionId, defaultGetOptionName } from '../defaultValues';
+import { areOptionsEqual } from '../helpers/areOptionsEqual';
+import { defaultGetOptionId, defaultGetOptionName } from '../../defaultValues';
 import { Option as MobileOption } from '../Options/Option';
 import { IBaseOption, IOptionProps } from '../Options/types';
 import { useMobileSelectMode } from './hooks/useMobileSelectMode';

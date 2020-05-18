@@ -8,7 +8,7 @@ import { IconArrow } from '../../../components/icons/IconArrow';
 import { IconClear } from '../../../components/icons/IconClear';
 import { IconSpinner } from '../../../components/icons/IconSpinner';
 
-import { hasTextInError } from './helpers';
+import { hasTextInError } from './helpers/hasTextInError';
 
 import style from './BaseSelect.module.scss';
 

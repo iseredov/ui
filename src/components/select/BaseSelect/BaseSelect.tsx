@@ -10,10 +10,11 @@ import {
   defaultGetOptionName,
   defaultLoadingMessage,
   defaultNoOptionsMessage,
-} from './defaultValues';
-import { getSelectClassNameWithModificators } from './helpers';
+} from '../defaultValues';
+import { getSelectClassNameWithModificators } from './helpers/getSelectClassNameWithModificators';
 import { useElementWidth } from './hooks';
-import { OptionList, IBaseOption } from './Options';
+import { OptionList } from './Options/OptionList';
+import { IBaseOption } from './Options/types';
 import { SelectPlaceholder, SelectText } from './SelectElements';
 import { SelectIcons } from './SelectIcons';
 import { IBaseSelectProps } from './types';

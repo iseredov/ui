@@ -1,7 +1,7 @@
 import { useCallback, useState, SyntheticEvent } from 'react';
 
-import { IBaseOption } from '../../Options';
-import { switchSelectedOptions } from '../../helpers';
+import { IBaseOption } from '../../Options/types';
+import { switchSelectedOptions } from '../../helpers/switchSelectedOptions';
 
 interface TMultiModeParams<Option> {
   initialSelectedOptions: Option[];

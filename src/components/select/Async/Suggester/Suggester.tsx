@@ -2,11 +2,9 @@ import React, { useCallback, useMemo, useState } from 'react';
 import noop from 'lodash/noop';
 import get from 'lodash/get';
 
-import {
-  BaseSelect,
-  IBaseOption,
-  defaultGetOptionName,
-} from '../../BaseSelect';
+import { BaseSelect } from '../../BaseSelect/BaseSelect';
+import { IBaseOption } from '../../BaseSelect/Options/types';
+import { defaultGetOptionName } from '../../defaultValues';
 import { SelectInput } from '../components/SelectInput';
 import { useSearchLoadData } from '../hooks';
 import { ISuggesterProps } from './types';

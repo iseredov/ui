@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 
-import { BaseSelect, IBaseOption } from '../BaseSelect';
+import { BaseSelect } from '../BaseSelect/BaseSelect';
+import { IBaseOption } from '../BaseSelect/Options/types';
 import { IBaseSelectProps } from './types';
 
 export const BaseSingleSelect = <Option extends IBaseOption>({

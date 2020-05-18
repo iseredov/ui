@@ -1,6 +1,6 @@
 import { SyntheticEvent } from 'react';
 
-import { IBaseOption } from '../../Options';
+import { IBaseOption } from '../../Options/types';
 import { useMultiSelectMode } from './useMultiSelectMode';
 import { useSingleSelectMode } from './useSingleSelectMode';
 

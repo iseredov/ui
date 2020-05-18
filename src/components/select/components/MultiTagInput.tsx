@@ -6,15 +6,15 @@ import React, {
   SyntheticEvent,
 } from 'react';
 
-import { KEY_CODE } from '../../../../shared/constants';
-import { SelectPlaceholder } from '../../BaseSelect/SelectElements';
-import { ITag } from '../BaseMultiTagSelect';
+import { KEY_CODE } from '../../../shared/constants';
+import { SelectPlaceholder } from '../BaseSelect/SelectElements';
+import { ITag } from '../MultiTagSelect/BaseMultiTagSelect';
 
-import s from './CustomInput.module.scss';
+import s from './MultiTagInput.module.scss';
 
 const NOT_SELECTED_HOVER_INDEX = -1;
 
-export interface ICustomInputProps {
+export interface IMultiTagInputProps {
   isOpen: boolean;
   inputValue: string;
   placeholder: string;
@@ -25,7 +25,7 @@ export interface ICustomInputProps {
   onDeleteTag: (id: IdType) => void;
 }
 
-const BaseCustomInput = ({
+const NoMemoMultiTagInput = ({
   selectedTags,
   isOpen,
   placeholder,
@@ -34,7 +34,7 @@ const BaseCustomInput = ({
   onChangeInputValue,
   onDeleteTag,
   setHoverIndexTag,
-}: ICustomInputProps) => {
+}: IMultiTagInputProps) => {
   const selectedTagsLength = selectedTags.length;
   const lastIndexSelectedTags = selectedTagsLength - 1;
 
@@ -141,4 +141,4 @@ const BaseCustomInput = ({
   ) : null;
 };
 
-export const CustomInput = memo<ICustomInputProps>(BaseCustomInput);
+export const MultiTagInput = memo<IMultiTagInputProps>(NoMemoMultiTagInput);

@@ -4,7 +4,7 @@ import get from 'lodash/get';
 
 import { useLoadData } from '../useLoadData';
 
-import { IBaseOption } from '../../../BaseSelect';
+import { IBaseOption } from '../../../BaseSelect/Options/types';
 
 export interface ILoadOptionParams {
   search: string;

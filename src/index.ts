@@ -28,10 +28,21 @@ export { Portal } from './components/Portal';
 export { ScrollBlock } from './components/ScrollBlock';
 
 /** selects */
+export { BaseSelect } from './components/select/BaseSelect/BaseSelect';
+export { OptionTemplate } from './components/select/BaseSelect/Options/OptionTemplate';
 export {
-  BaseSelect,
-  OptionTemplate,
   IBaseOption,
   IOptionProps,
-} from './components/select/BaseSelect';
-export { Select, BaseSingleSelect } from './components/select/SingleSelect';
+} from './components/select/BaseSelect/Options/types';
+
+export { Select } from './components/select/SingleSelect/SingleSelect';
+export { BaseSingleSelect } from './components/select/SingleSelect/BaseSingleSelect';
+export { AsyncSelect } from './components/select/Async/AsyncSelect/AsyncSelect';
+export { BaseAsyncSelect } from './components/select/Async/AsyncSelect/BaseAsyncSelect';
+export { Suggester } from './components/select/Async//Suggester/Suggester';
+export { useReloadData } from './components/select/Async/hooks';
+
+export { MultiSelect } from './components/select/MultiSelect/MultiSelect';
+export { MultiTagSelect } from './components/select/MultiTagSelect/MultiTagSelect';
+export { BaseMultiSelect } from './components/select/MultiSelect/BaseMultiSelect';
+export { BaseMultiTagSelect } from './components/select/MultiTagSelect/BaseMultiTagSelect';

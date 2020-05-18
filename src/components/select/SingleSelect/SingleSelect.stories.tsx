@@ -13,7 +13,7 @@ import { defaultOptionList, selectSize } from '../storyHelpers';
 import { Grid3x3 } from '../../../storybook/Grid3x3';
 
 import { Select } from './SingleSelect';
-import { SelectSize } from '../BaseSelect';
+import { SelectSize } from '../BaseSelect/types';
 
 export default {
   title: 'Cargomart/Select/SingleSelect',

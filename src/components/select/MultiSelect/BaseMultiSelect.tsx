@@ -1,13 +1,13 @@
 import React, { useCallback, SyntheticEvent } from 'react';
 import noop from 'lodash/noop';
 
+import { BaseSelect } from '../BaseSelect/BaseSelect';
+import { IBaseOption } from '../BaseSelect/Options/types';
 import {
-  BaseSelect,
-  IBaseOption,
   defaultGetOptionId,
   defaultGetOptionName,
   defaultNoOptionsMessage,
-} from '../BaseSelect';
+} from '../defaultValues';
 import { SelectPlaceholder, SelectText } from '../BaseSelect/SelectElements';
 import { MultiOption } from './MultiOption';
 import { IBaseMultiSelectProps } from './types';

@@ -5,7 +5,7 @@ import * as knobs from '@storybook/addon-knobs';
 import { MultiTagSelect } from './MultiTagSelect';
 import { selectSize, defaultOptionList } from './../storyHelpers';
 import { Grid3x3 } from '../../../storybook/Grid3x3';
-import { SelectSize } from '../BaseSelect';
+import { SelectSize } from '../BaseSelect/types';
 
 export default {
   title: 'Cargomart/Select/MultiTagSelect',

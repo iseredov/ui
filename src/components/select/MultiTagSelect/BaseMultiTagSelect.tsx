@@ -2,14 +2,12 @@ import React, { useCallback, useMemo, useState } from 'react';
 import keyBy from 'lodash/keyBy';
 
 import { MobileSelectInput } from '../Async/components/SelectInput';
-import {
-  IBaseOption,
-  defaultGetOptionId,
-  defaultGetOptionName,
-} from '../BaseSelect';
-import { BaseMultiSelect, IBaseMultiSelectProps } from '../MultiSelect';
-import { CustomSelectInput } from './components/CustomSelectInput';
-import { MultiTagOption } from './components/MultiTagOption';
+import { IBaseOption } from '../BaseSelect/Options/types';
+import { defaultGetOptionId, defaultGetOptionName } from '../defaultValues';
+import { BaseMultiSelect } from '../MultiSelect/BaseMultiSelect';
+import { IBaseMultiSelectProps } from '../MultiSelect/types';
+import { MultiTagSelectInput } from '../components/MultiTagSelectInput';
+import { MultiTagOption } from '../components/MultiTagOption';
 
 const NOT_SELECTED_HOVER_INDEX = -1;
 
@@ -103,7 +101,7 @@ export const BaseMultiTagSelect = <Option extends IBaseOption>({
       selectedOptions={selectedOptions}
       options={filteredOptions}
       customSelectInput={
-        <CustomSelectInput
+        <MultiTagSelectInput
           isOpen={isOpen}
           inputValue={inputValue}
           placeholder={placeholder}

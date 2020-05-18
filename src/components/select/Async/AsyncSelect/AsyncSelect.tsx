@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { useIsMobileSize } from '../../../../shared/useIsMobileSize';
-import { IBaseOption } from '../../BaseSelect';
+import { IBaseOption } from '../../BaseSelect/Options/types';
 import { BaseAsyncSelect } from './BaseAsyncSelect';
 import { IAsyncSelectProps } from './types';
 

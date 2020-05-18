@@ -1,4 +1,5 @@
-import { IBaseOption, areOptionsEqual } from '../../BaseSelect';
+import { areOptionsEqual } from '../../BaseSelect/helpers/areOptionsEqual';
+import { IBaseOption } from '../../BaseSelect/Options/types';
 
 interface TAddSelectedOptionParams<Option> {
   getOptionId: (option: any) => IdType;

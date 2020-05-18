@@ -1,16 +1,16 @@
 import React, { memo, useMemo } from 'react';
 
-import { CustomInput, ICustomInputProps } from './CustomInput';
+import { MultiTagInput, IMultiTagInputProps } from './MultiTagInput';
 import { Tag } from './Tag';
 
-import s from './CustomInput.module.scss';
+import s from './MultiTagInput.module.scss';
 
-const BaseCustomSelectInput = ({
+const NoMemoMultiTagSelectInput = ({
   selectedTags,
   tagHoverIndex,
   onDeleteTag,
   ...props
-}: ICustomInputProps) => {
+}: IMultiTagInputProps) => {
   const sortedTags = useMemo(() => {
     const sortedTags = [...selectedTags];
     sortedTags.sort((a, b) => a.name.length - b.name.length);
@@ -28,7 +28,7 @@ const BaseCustomSelectInput = ({
           onDeleteTag={onDeleteTag}
         />
       ))}
-      <CustomInput
+      <MultiTagInput
         {...props}
         selectedTags={sortedTags}
         tagHoverIndex={tagHoverIndex}
@@ -38,6 +38,6 @@ const BaseCustomSelectInput = ({
   );
 };
 
-export const CustomSelectInput = memo(
-  BaseCustomSelectInput
-) as typeof BaseCustomSelectInput;
+export const MultiTagSelectInput = memo(
+  NoMemoMultiTagSelectInput
+) as typeof NoMemoMultiTagSelectInput;

@@ -2,14 +2,15 @@ import React, { useCallback, useEffect, useState, SyntheticEvent } from 'react';
 import noop from 'lodash/noop';
 import get from 'lodash/get';
 
+import { BaseSelect } from '../../BaseSelect/BaseSelect';
+import { areOptionsEqual } from '../../BaseSelect/helpers/areOptionsEqual';
+import { IBaseOption } from '../../BaseSelect/Options/types';
+
 import {
-  BaseSelect,
-  IBaseOption,
-  areOptionsEqual,
   defaultGetOptionId,
   defaultGetOptionName,
   defaultNoOptionsMessage,
-} from '../../BaseSelect';
+} from '../../defaultValues';
 import { Footer } from '../components/Footer';
 import { MobileSelectInput, SelectInput } from '../components/SelectInput';
 import { addSelectedToOptions, isScrolledToBottom } from '../helpers';

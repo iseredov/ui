@@ -6,7 +6,7 @@ import { Grid3x3 } from '../../../storybook/Grid3x3';
 
 import { MultiSelect } from './MultiSelect';
 import { defaultOptionList, selectSize } from '../storyHelpers';
-import { SelectSize } from '../BaseSelect';
+import { SelectSize } from '../BaseSelect/types';
 
 export default {
   title: 'Cargomart/Select/MultiSelect',

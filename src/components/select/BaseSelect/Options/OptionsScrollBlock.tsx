@@ -5,13 +5,13 @@ import noop from 'lodash/noop';
 
 import { ScrollBlock } from '../../../ScrollBlock';
 
-import { areOptionsEqual } from '../helpers';
+import { areOptionsEqual } from '../helpers/areOptionsEqual';
 import {
   defaultGetOptionId,
   defaultGetOptionName,
   defaultLoadingMessage,
   defaultNoOptionsMessage,
-} from '../defaultValues';
+} from '../../defaultValues';
 import { IBaseOption, IOptionProps, IOptionsScrollBlockProps } from './types';
 import { Option } from './Option';
 

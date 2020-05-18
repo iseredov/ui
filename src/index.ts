@@ -1,4 +1,4 @@
-export { TooltipMemo as Tooltip, ITooltipProps } from 'components/Tooltip';
+export { TooltipMemo as Tooltip, ITooltipProps } from './components/Tooltip';
 export {
   CheckboxMemo as Checkbox,
   ICheckboxProps,

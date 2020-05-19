@@ -1,0 +1,45 @@
+@import '../../shared/vars';
+
+.inputWrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+
+  &_mobile {
+    margin-top: 10px;
+    position: relative;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4px;
+  color: $light-grey;
+
+  &_right {
+    left: auto;
+    right: 8px;
+  }
+
+  &_clear {
+    color: $gray;
+  }
+}
+
+.input {
+  flex: 1;
+  min-height: 40px;
+  border: 1px solid $cool-grey-two;
+  border-radius: 3px;
+  padding: 0 28px 0 8px;
+
+  &_hasIcon {
+    padding-left: 40px;
+  }
+
+  &:focus {
+    border: 1px solid #33a0ff;
+  }
+}

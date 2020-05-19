@@ -5,6 +5,7 @@ import cn from 'classnames/bind';
 import s from './Grid3x3.module.scss';
 
 type TProps = {
+  maxWidth?: boolean;
   children: ReactNode;
 };
 
@@ -20,11 +21,11 @@ const positions = [
   'bottomRight',
 ];
 
-export const Grid3x3 = memo<TProps>(function Grid3x3({ children }) {
+export const Grid3x3 = memo<TProps>(function Grid3x3({ children, maxWidth }) {
   return (
     <div className={s.container}>
       {positions.map(position => (
-        <div className={cn(s.maxWidth, s[position])} key={position}>
+        <div className={cn(maxWidth && s.maxWidth, s[position])} key={position}>
           {children}
         </div>
       ))}

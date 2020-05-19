@@ -28,18 +28,42 @@ export { Portal } from './components/Portal';
 export { ScrollBlock } from './components/ScrollBlock';
 
 /** selects */
-export { BaseSelect } from './components/select/BaseSelect/BaseSelect';
-export { OptionTemplate } from './components/select/Options/OptionTemplate';
-export { IBaseOption, IOptionProps } from './components/select/Options/types';
+export { BaseSelect, IBaseSelectProps } from './components/selects/BaseSelect';
+export { OptionTemplateMemo as OptionTemplate } from './components/selects/OptionTemplate';
 
-export { Select } from './components/select/SingleSelect/SingleSelect';
-export { BaseSingleSelect } from './components/select/SingleSelect/BaseSingleSelect';
-export { AsyncSelect } from './components/select/AsyncSelect/AsyncSelect';
-export { BaseAsyncSelect } from './components/select/AsyncSelect/BaseAsyncSelect';
-export { Suggester } from './components/select/AsyncSelect/Suggester';
-export { useReloadData } from './components/select/AsyncSelect/hooks/useReloadData';
+export {
+  SingleSelect,
+  ISingleSelectProps,
+} from './components/selects/SingleSelect';
+export {
+  BaseSingleSelect,
+  IBaseSingleSelectProps,
+} from './components/selects/BaseSingleSelect';
+export {
+  AsyncSelect,
+  IAsyncSelectProps,
+} from './components/selects/AsyncSelect';
+export {
+  BaseAsyncSelect,
+  IBaseAsyncSelectProps,
+} from './components/selects/BaseAsyncSelect';
+export { Suggester, ISuggesterProps } from './components/selects/Suggester';
+export { useReloadData } from './components/selects/hooks/useReloadData';
 
-export { MultiSelect } from './components/select/MultiSelect/MultiSelect';
-export { MultiTagSelect } from './components/select/MultiSelect/MultiTagSelect';
-export { BaseMultiSelect } from './components/select/MultiSelect/BaseMultiSelect';
-export { BaseMultiTagSelect } from './components/select/MultiSelect/BaseMultiTagSelect';
+export {
+  MultiSelect,
+  IMultiSelectProps,
+} from './components/selects/MultiSelect';
+export {
+  MultiTagSelect,
+  IMultiTagSelectProps,
+} from './components/selects/MultiTagSelect';
+export {
+  BaseMultiSelect,
+  IBaseMultiSelectProps,
+} from './components/selects/BaseMultiSelect';
+export {
+  BaseMultiTagSelect,
+  IBaseMultiSelectTagProps,
+} from './components/selects/BaseMultiTagSelect';
+export { IBaseOptionType, IOptionProps } from './components/selects/types';

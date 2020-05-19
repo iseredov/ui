@@ -1,0 +1,80 @@
+@import '../../shared/vars';
+
+$divider: rgba(black, 0.12);
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: $z-index-mobile + 1;
+}
+
+.topWrapper {
+  min-height: 56px;
+  width: 100%;
+  box-shadow: 0 2px 2px 0 $divider, 0 0 2px 0 $divider;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 8px;
+  z-index: 2;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 32px;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.closeButton {
+  height: 24px;
+  padding: 0;
+  margin-right: 10px;
+  box-shadow: 0 0 0 0;
+}
+
+.name {
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: $colorGray;
+}
+
+.scrollBlockWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: $pale-grey-two;
+  width: 100%;
+}
+
+.optionList {
+  background-color: white;
+}
+
+.applyButton {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border-radius: 0;
+  height: 48px;
+  font-size: 16px;
+}

@@ -104,7 +104,6 @@ export interface IOptionsScrollBlockProps<Option> {
    * Коллбек, выполняемый при скролле выпадающего списка
    */
   onScrollOptionList?: (event: SyntheticEvent<HTMLDivElement>) => void;
-
   /**
    * Коллбек для получения id опций, используется при проставлении React key
    * и сравнения опций (выбрана ли текущая опция)

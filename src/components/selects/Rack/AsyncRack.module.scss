@@ -1,0 +1,18 @@
+.selectWrapperNone {
+  display: none;
+}
+
+.selectInnerWrapper {
+  height: 40px;
+}
+
+.selectInputWrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.selectInput {
+  width: calc(100% - 30px);
+  font-size: 14px;
+}

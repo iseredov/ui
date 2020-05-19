@@ -21,11 +21,11 @@ const positions = [
   'bottomRight',
 ];
 
-export const Grid3x3 = memo<TProps>(function Grid3x3({ children, maxWidth }) {
+export const Grid3x3 = memo<TProps>(function Grid3x3({ children }) {
   return (
     <div className={s.container}>
       {positions.map(position => (
-        <div className={cn(maxWidth && s.maxWidth, s[position])} key={position}>
+        <div className={cn(s[position])} key={position}>
           {children}
         </div>
       ))}

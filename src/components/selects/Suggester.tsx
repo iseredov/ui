@@ -1,6 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import noop from 'lodash/noop';
-import get from 'lodash/get';
 
 import { BaseSelect } from './BaseSelect';
 import { defaultGetOptionName } from './helpers/defaultValues';
@@ -85,11 +84,8 @@ export const Suggester = <Option extends IBaseOptionType>({
   const selectInput = (
     <SingleValueMemo
       suggestInputClassName={selectInputClassName}
-      selectTextClassName={get(otherClassNames, 'select.selectText')}
-      selectPlaceholderClassName={get(
-        otherClassNames,
-        'select.selectPlaceholder'
-      )}
+      selectTextClassName={otherClassNames?.select?.selectText}
+      selectPlaceholderClassName={otherClassNames?.select?.selectPlaceholder}
       isOpen={isOpen}
       selectedOptionName={value}
       placeholder={placeholder}
@@ -106,6 +102,7 @@ export const Suggester = <Option extends IBaseOptionType>({
   return (
     <BaseSelect
       {...props}
+      mobileName="" // TODO: реализовать мобильную версию для Suggester
       classNames={otherClassNames}
       isOpen={showOptionList}
       onSetOpen={setOpen}

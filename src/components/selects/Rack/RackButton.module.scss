@@ -1,0 +1,51 @@
+@import '../../../shared/vars';
+
+$disabledColor: #9fadbb;
+
+.button {
+  border: 0;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-top: solid 1px rgba(black, 0.08);
+  background-color: #ebf1ff;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #dbe6ff;
+  }
+
+  &_disabled {
+    cursor: default;
+    background-color: #e4e8ec;
+    box-shadow: none;
+  }
+}
+
+.iconSearch {
+  transform: scale(-1, 1);
+  color: $colorBlue;
+  margin-right: 8px;
+
+  &_disabled {
+    color: $disabledColor;
+  }
+}
+
+.buttonName {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: $teal-blue;
+
+  &_disabled {
+    color: $disabledColor;
+  }
+}

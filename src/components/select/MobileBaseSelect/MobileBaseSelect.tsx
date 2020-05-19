@@ -87,7 +87,7 @@ export const MobileBaseSelect = <Option extends IBaseOption>({
                 <IconArrow rotate={90} />
               </Button>
               <p className={cx('name')}>
-                {name}{' '}
+                {name}
                 {`${
                   isMultiMode && amountSelectedValue > 1
                     ? `(${amountSelectedValue})`

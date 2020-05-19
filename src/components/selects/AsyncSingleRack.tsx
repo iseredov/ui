@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo } from 'react';
 import noop from 'lodash/noop';
 
-import { IBaseOption } from '../Options/types';
+import { IBaseOptionType } from './types';
 import { AsyncRack, IAsyncRackProps } from './AsyncRack';
 
 export interface IAsyncSingleRackProps<Option, SelectedOption>
@@ -14,7 +14,7 @@ export interface IAsyncSingleRackProps<Option, SelectedOption>
 }
 
 export const AsyncSingleRack = <
-  Option extends IBaseOption,
+  Option extends IBaseOptionType,
   SelectedOption extends Partial<Option>
 >({
   selectedOption,

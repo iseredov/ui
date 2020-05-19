@@ -10,6 +10,7 @@ import {
 } from './helpers/storyHelpers';
 
 import { Grid3x3 } from '../../storybook/Grid3x3';
+import { WidthWrapper } from '../../storybook/WidthWrapper';
 import { SelectSize } from './types';
 
 const optionList = Array(...new Array(100)).map((_: number, index: number) => ({
@@ -108,25 +109,27 @@ export const WithKnobs = () => {
 
   return (
     <Grid3x3>
-      <AsyncSelect
-        mobileName={mobileName}
-        size={size}
-        selectedOptionData={value}
-        loadOptions={loadData}
-        hasAutoOptionListWidth={hasAutoOptionListWidth}
-        maxOptionListWidth={maxOptionListWidth}
-        minOptionListWidth={minOptionListWidth}
-        error={error}
-        loadingMessage={loadingMessage}
-        noOptionsMessage={noOptionsMessage}
-        placeholder={placeholder}
-        isClearable={isClearable}
-        isDisabled={isDisabled}
-        hasInfinityScroll={hasInfinityScroll}
-        hasDropDownIcon={hasDropDownIcon}
-        onChange={onChange}
-        onChangeSearchValue={onChangeSearchValue}
-      />
+      <WidthWrapper>
+        <AsyncSelect
+          mobileName={mobileName}
+          size={size}
+          selectedOptionData={value}
+          loadOptions={loadData}
+          hasAutoOptionListWidth={hasAutoOptionListWidth}
+          maxOptionListWidth={maxOptionListWidth}
+          minOptionListWidth={minOptionListWidth}
+          error={error}
+          loadingMessage={loadingMessage}
+          noOptionsMessage={noOptionsMessage}
+          placeholder={placeholder}
+          isClearable={isClearable}
+          isDisabled={isDisabled}
+          hasInfinityScroll={hasInfinityScroll}
+          hasDropDownIcon={hasDropDownIcon}
+          onChange={onChange}
+          onChangeSearchValue={onChangeSearchValue}
+        />
+      </WidthWrapper>
     </Grid3x3>
   );
 };

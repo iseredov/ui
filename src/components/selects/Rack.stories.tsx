@@ -4,9 +4,9 @@ import * as knobs from '@storybook/addon-knobs';
 
 import { Rack, IRackProps } from './Rack';
 import { CustomItem } from './storyhelper';
-import { IOption, defaultOptionList } from '../helpers/storyHelpers';
-import { Grid3x3 } from '../../../storybook/Grid3x3';
-import { WidthWrapper } from '../../../storybook/WidthWrapper';
+import { IOption, defaultOptionList } from './helpers/storyHelpers';
+import { Grid3x3 } from '../../storybook/Grid3x3';
+import { WidthWrapper } from '../../storybook/WidthWrapper';
 
 export default {
   title: 'Cargomart/Select/Rack',

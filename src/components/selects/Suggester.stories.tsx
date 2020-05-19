@@ -5,6 +5,8 @@ import * as knobs from '@storybook/addon-knobs';
 import { Suggester } from './Suggester';
 import { selectSize, mockLoadOptions } from './helpers/storyHelpers';
 import { Grid3x3 } from '../../storybook/Grid3x3';
+import { WidthWrapper } from '../../storybook/WidthWrapper';
+
 import { SelectSize } from './types';
 
 const loadData = mockLoadOptions();
@@ -90,21 +92,23 @@ export const WithKnobs = () => {
 
   return (
     <Grid3x3>
-      <Suggester
-        size={size}
-        value={value}
-        loadOptions={loadData}
-        maxOptionListWidth={maxOptionListWidth}
-        minOptionListWidth={minOptionListWidth}
-        error={error}
-        placeholder={placeholder}
-        noOptionsMessage={noOptionsMessage}
-        hasDropDownIcon={hasDropDownIcon}
-        hasAutoOptionListWidth={hasAutoOptionListWidth}
-        isClearable={isClearable}
-        isDisabled={isDisabled}
-        onChange={onChange}
-      />
+      <WidthWrapper>
+        <Suggester
+          size={size}
+          value={value}
+          loadOptions={loadData}
+          maxOptionListWidth={maxOptionListWidth}
+          minOptionListWidth={minOptionListWidth}
+          error={error}
+          placeholder={placeholder}
+          noOptionsMessage={noOptionsMessage}
+          hasDropDownIcon={hasDropDownIcon}
+          hasAutoOptionListWidth={hasAutoOptionListWidth}
+          isClearable={isClearable}
+          isDisabled={isDisabled}
+          onChange={onChange}
+        />
+      </WidthWrapper>
     </Grid3x3>
   );
 };

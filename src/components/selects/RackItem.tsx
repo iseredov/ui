@@ -1,7 +1,7 @@
-import React, { useCallback, memo } from 'react';
+import React, { useCallback, memo, ComponentType } from 'react';
 
-import { IBaseOption } from '../Options/types';
-import { IRackItemProps } from './types';
+import { IBaseOptionType } from './types';
+import { IRackItemProps } from './BaseRack';
 
 interface IProps<Option> {
   value: Option;
@@ -11,10 +11,10 @@ interface IProps<Option> {
   onDelete: (option: Option) => void;
   onGetUp: (index: number) => void;
   onGetDown: (index: number) => void;
-  Item: (props: IRackItemProps<Option>) => JSX.Element;
+  Item: ComponentType<IRackItemProps<Option>>;
 }
 
-const NoMemoRackItem = <Option extends IBaseOption>({
+const NoMemoRackItem = <Option extends IBaseOptionType>({
   value,
   index,
   isReadOnly,

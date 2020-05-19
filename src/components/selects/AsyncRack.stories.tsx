@@ -3,9 +3,9 @@ import { action } from '@storybook/addon-actions';
 import * as knobs from '@storybook/addon-knobs';
 
 import { AsyncRack, IAsyncRackProps } from './AsyncRack';
-import { Grid3x3 } from '../../../storybook/Grid3x3';
-import { WidthWrapper } from '../../../storybook/WidthWrapper';
-import { mockLoadOptions, IOption } from '../helpers/storyHelpers';
+import { Grid3x3 } from '../../storybook/Grid3x3';
+import { WidthWrapper } from '../../storybook/WidthWrapper';
+import { mockLoadOptions, IOption } from './helpers/storyHelpers';
 import { CustomItem } from './storyhelper';
 
 export default {

@@ -1,25 +1,24 @@
 import React from 'react';
 
-import { IBaseOption } from '../Options/types';
-import { IBaseRackProps } from './types';
-import { IBaseSelectProps } from '../SingleSelect/types';
-import { BaseSingleSelect } from '../SingleSelect/BaseSingleSelect';
+import { IBaseOptionType } from './types';
+import { IBaseRackProps } from './BaseRack';
+import { BaseSingleSelect, IBaseSingleSelectProps } from './BaseSingleSelect';
 import { BaseRack } from './BaseRack';
 
 import s from './Rack.module.scss';
 
 export interface IRackProps<Option, SelectedOption>
   extends Omit<
-    IBaseRackProps<Option, SelectedOption, IBaseSelectProps<Option>>,
+    IBaseRackProps<Option, SelectedOption, IBaseSingleSelectProps<Option>>,
     'mobileName' | 'CustomSelect'
   > {}
 
-const CustomSingleSelect = <Option extends IBaseOption>({
+const CustomSingleSelect = <Option extends IBaseOptionType>({
   isOpen,
   ...props
-}: IBaseSelectProps<Option>) =>
+}: IBaseSingleSelectProps<Option>) =>
   isOpen && (
-    <BaseSingleSelect
+    <BaseSingleSelect<Option>
       {...props}
       classNames={{
         ...props.classNames,
@@ -33,7 +32,7 @@ const CustomSingleSelect = <Option extends IBaseOption>({
   );
 
 export const Rack = <
-  Option extends IBaseOption,
+  Option extends IBaseOptionType,
   SelectedOption extends Partial<Option>
 >(
   props: IRackProps<Option, SelectedOption>

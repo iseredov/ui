@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { action } from '@storybook/addon-actions';
-import { IRackItemProps } from './types';
-import { IOption } from '../helpers/storyHelpers';
+import { IRackItemProps } from './BaseRack';
+import { IOption } from './helpers/storyHelpers';
 
 export const CustomItem = ({
   value,

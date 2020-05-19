@@ -11,6 +11,7 @@ import {
 
 import { defaultOptionList, selectSize } from './helpers/storyHelpers';
 import { Grid3x3 } from '../../storybook/Grid3x3';
+import { WidthWrapper } from '../../storybook/WidthWrapper';
 
 import { SingleSelect } from './SingleSelect';
 import { SelectSize } from './types';
@@ -93,22 +94,24 @@ export const WithKnobs = () => {
 
   return (
     <Grid3x3>
-      <SingleSelect
-        mobileName={mobileName}
-        placeholder={placeholder}
-        hasAutoOptionListWidth={hasAutoOptionListWidth}
-        maxOptionListWidth={maxOptionListWidth}
-        minOptionListWidth={minOptionListWidth}
-        size={size}
-        value={selectedValue}
-        options={defaultOptionList}
-        error={error}
-        isClearable={isClearable}
-        isDisabled={isDisabled}
-        isLoading={isLoading}
-        hasDropDownIcon={hasDropDownIcon}
-        onChange={onChange}
-      />
+      <WidthWrapper>
+        <SingleSelect
+          mobileName={mobileName}
+          placeholder={placeholder}
+          hasAutoOptionListWidth={hasAutoOptionListWidth}
+          maxOptionListWidth={maxOptionListWidth}
+          minOptionListWidth={minOptionListWidth}
+          size={size}
+          value={selectedValue}
+          options={defaultOptionList}
+          error={error}
+          isClearable={isClearable}
+          isDisabled={isDisabled}
+          isLoading={isLoading}
+          hasDropDownIcon={hasDropDownIcon}
+          onChange={onChange}
+        />
+      </WidthWrapper>
     </Grid3x3>
   );
 };
@@ -122,13 +125,15 @@ export const NoOptions = () => {
 
   return (
     <Grid3x3>
-      <SingleSelect
-        mobileName="Простой справочник"
-        noOptionsMessage={noOptionsMessage}
-        value={value}
-        options={[]}
-        onChange={noop}
-      />
+      <WidthWrapper>
+        <SingleSelect
+          mobileName="Простой справочник"
+          noOptionsMessage={noOptionsMessage}
+          value={value}
+          options={[]}
+          onChange={noop}
+        />
+      </WidthWrapper>
     </Grid3x3>
   );
 };

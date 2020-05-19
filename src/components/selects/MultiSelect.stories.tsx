@@ -3,6 +3,7 @@ import noop from 'lodash/noop';
 import { action } from '@storybook/addon-actions';
 import * as knobs from '@storybook/addon-knobs';
 import { Grid3x3 } from '../../storybook/Grid3x3';
+import { WidthWrapper } from '../../storybook/WidthWrapper';
 
 import { MultiSelect } from './MultiSelect';
 import { defaultOptionList, selectSize } from './helpers/storyHelpers';
@@ -89,22 +90,24 @@ export const WithKnobs = () => {
 
   return (
     <Grid3x3>
-      <MultiSelect
-        mobileName={mobileName}
-        placeholder={placeholder}
-        hasAutoOptionListWidth={hasAutoOptionListWidth}
-        maxOptionListWidth={maxOptionListWidth}
-        minOptionListWidth={minOptionListWidth}
-        size={size}
-        selectedOptions={selectedOptions}
-        options={defaultOptionList}
-        error={error}
-        isClearable={isClearable}
-        isDisabled={isDisabled}
-        isLoading={isLoading}
-        hasDropDownIcon={hasDropDownIcon}
-        onChange={onChange}
-      />
+      <WidthWrapper>
+        <MultiSelect
+          mobileName={mobileName}
+          placeholder={placeholder}
+          hasAutoOptionListWidth={hasAutoOptionListWidth}
+          maxOptionListWidth={maxOptionListWidth}
+          minOptionListWidth={minOptionListWidth}
+          size={size}
+          selectedOptions={selectedOptions}
+          options={defaultOptionList}
+          error={error}
+          isClearable={isClearable}
+          isDisabled={isDisabled}
+          isLoading={isLoading}
+          hasDropDownIcon={hasDropDownIcon}
+          onChange={onChange}
+        />
+      </WidthWrapper>
     </Grid3x3>
   );
 };
@@ -118,13 +121,15 @@ export const NoOptions = () => {
 
   return (
     <Grid3x3>
-      <MultiSelect
-        mobileName="Простой справочник"
-        noOptionsMessage={noOptionsMessage}
-        selectedOptions={value}
-        options={[]}
-        onChange={noop}
-      />
+      <WidthWrapper>
+        <MultiSelect
+          mobileName="Простой справочник"
+          noOptionsMessage={noOptionsMessage}
+          selectedOptions={value}
+          options={[]}
+          onChange={noop}
+        />
+      </WidthWrapper>
     </Grid3x3>
   );
 };

@@ -5,6 +5,7 @@ import * as knobs from '@storybook/addon-knobs';
 import { MultiTagSelect } from './MultiTagSelect';
 import { selectSize, defaultOptionList } from './helpers/storyHelpers';
 import { Grid3x3 } from '../../storybook/Grid3x3';
+import { WidthWrapper } from '../../storybook/WidthWrapper';
 import { SelectSize } from './types';
 
 export default {
@@ -94,23 +95,25 @@ export const WithKnobs = () => {
 
   return (
     <Grid3x3>
-      <MultiTagSelect
-        mobileName={mobileName}
-        placeholder={placeholder}
-        maxOptionListWidth={maxOptionListWidth}
-        minOptionListWidth={minOptionListWidth}
-        size={size}
-        selectedOptions={selectedOptions}
-        options={defaultOptionList}
-        error={error}
-        noOptionsMessage={noOptionsMessage}
-        isClearable={isClearable}
-        isDisabled={isDisabled}
-        isLoading={isLoading}
-        hasDropDownIcon={hasDropDownIcon}
-        hasAutoOptionListWidth={hasAutoOptionListWidth}
-        onChange={onChange}
-      />
+      <WidthWrapper>
+        <MultiTagSelect
+          mobileName={mobileName}
+          placeholder={placeholder}
+          maxOptionListWidth={maxOptionListWidth}
+          minOptionListWidth={minOptionListWidth}
+          size={size}
+          selectedOptions={selectedOptions}
+          options={defaultOptionList}
+          error={error}
+          noOptionsMessage={noOptionsMessage}
+          isClearable={isClearable}
+          isDisabled={isDisabled}
+          isLoading={isLoading}
+          hasDropDownIcon={hasDropDownIcon}
+          hasAutoOptionListWidth={hasAutoOptionListWidth}
+          onChange={onChange}
+        />
+      </WidthWrapper>
     </Grid3x3>
   );
 };

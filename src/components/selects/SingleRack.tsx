@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo } from 'react';
 import noop from 'lodash/noop';
 
-import { IBaseOption } from '../Options/types';
+import { IBaseOptionType } from './types';
 import { Rack, IRackProps } from './Rack';
 
 export interface ISingleRackProps<Option, SelectedOption>
@@ -14,7 +14,7 @@ export interface ISingleRackProps<Option, SelectedOption>
 }
 
 export const SingleRack = <
-  Option extends IBaseOption,
+  Option extends IBaseOptionType,
   SelectedOption extends Partial<Option>
 >({
   selectedOption,

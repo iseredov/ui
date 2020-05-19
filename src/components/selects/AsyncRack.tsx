@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react';
 import cn from 'classnames/bind';
 
-import { IconSearch } from '../../icons/IconSearch';
+import { IconSearch } from '../icons/IconSearch';
 
-import { BaseAsyncSelect } from '../AsyncSelect/BaseAsyncSelect';
-import { IBaseAsyncSelectProps } from '../AsyncSelect/AsyncSelectTypes';
-import { IBaseOption } from '../Options/types';
-import { IBaseRackProps } from './types';
+import { BaseAsyncSelect } from './BaseAsyncSelect';
+import { IBaseAsyncSelectProps } from './BaseAsyncSelect';
+import { IBaseOptionType } from './types';
+import { IBaseRackProps } from './BaseRack';
 import { BaseRack } from './BaseRack';
 
 import style from './AsyncRack.module.scss';
@@ -19,7 +19,7 @@ export interface IAsyncRackProps<Option, SelectedOption>
     'mobileName' | 'CustomSelect'
   > {}
 
-const CustomAsyncSelect = <Option extends IBaseOption>({
+const CustomAsyncSelect = <Option extends IBaseOptionType>({
   isOpen,
   classNames,
   ...props
@@ -51,7 +51,7 @@ const CustomAsyncSelect = <Option extends IBaseOption>({
 };
 
 export const AsyncRack = <
-  Option extends IBaseOption,
+  Option extends IBaseOptionType,
   SelectedOption extends Partial<Option>
 >(
   props: IAsyncRackProps<Option, SelectedOption>

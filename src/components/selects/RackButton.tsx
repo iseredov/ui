@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo } from 'react';
 import cn from 'classnames/bind';
 
-import { IconSearch } from '../../icons/IconSearch';
+import { IconSearch } from '../icons/IconSearch';
 
 import s from './RackButton.module.scss';
 
